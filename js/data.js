@@ -1,32 +1,37 @@
 "use strict";
 
-/* <!-- header start --> */
-/* <!-- header end --> */
+// <!-- basic start --> 
+// <!-- basic end -->
 
-/* <!-- hero start --> */
-/* <!-- hero end --> */
+// <!-- layout start --> 
+// <!-- layout end --> 
 
-/* <!-- about me start --> */
-/* <!-- about me end --> */
+// <!-- header start --> 
+// <!-- header end --> 
 
-/* <!-- services start --> */
-/* <!-- services end --> */
+// <!-- hero start --> 
+// <!-- hero end --> 
 
-/* <!-- portfolio start --> */
-/* <!-- portfolio end --> */
+// <!-- about me start --> 
+// <!-- about me end --> 
 
-/* <!-- testimonials start --> */
-/* <!-- testimonials end --> */
+// <!-- services start --> 
+// <!-- services end --> 
 
-/* <!-- numbers start --> */
-/* <!-- numbers end --> */
+// <!-- portfolio start --> 
+// <!-- portfolio end --> 
 
-/* <!-- our blog start --> */
-/* <!-- our blog end --> */
+// <!-- testimonials start --> 
+// <!-- testimonials end --> 
 
-/* <!-- contact us start --> */
-/* <!-- contact us end --> */
+// <!-- numbers start --> 
+// <!-- numbers end --> 
 
-/* <!-- footer start --> */
-/* <!-- footer end --> */
+// <!-- our blog start --> 
+// <!-- our blog end --> 
 
+// <!-- contact us start --> 
+// <!-- contact us end --> 
+
+// <!-- footer start --> 
+// <!-- footer end --> 
