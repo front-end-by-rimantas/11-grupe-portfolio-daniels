@@ -34,6 +34,10 @@
     padding: 15px;
     margin: 10px 0;
 }
+.block > i:hover {
+    background-color : var(--color-secondary);
+    color: white;    
+}
 .block > h4 {
     display: inline-block;
     width: 100%;
@@ -48,6 +52,16 @@
     line-height: 20px;
     margin: 10px 0;
     color: var(--color-text);
+}
+@media (max-width: 1100px) {
+    .block {
+        width: calc((100% - 60px) / 2);
+    }
+}
+@media (max-width: 800px) {
+    .block {
+        width: calc((100% - 30px));
+    }
 }
     
 /* <!-- services end --> */
