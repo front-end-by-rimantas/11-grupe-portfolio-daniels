@@ -16,6 +16,9 @@
 // <!-- about me end --> 
 
 // <!-- services start --> 
+
+renderBlocks('services', services );
+
 // <!-- services end --> 
 
 // <!-- portfolio start --> 

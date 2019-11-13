@@ -16,6 +16,21 @@
 // <!-- about me end --> 
 
 // <!-- services start --> 
+    function renderBlocks(target, list) {
+        let HTML = '';
+
+        for (let i = 0; i < list.length; i++) {
+            const item = list[i];
+            HTML += `<div class="block">
+                        <i class=" fa fa-${item.icon}" ></i>
+                        <h4>${item.title}</h4>
+                        <div class="description">${item.description}</div>
+                     </div>`;
+            
+        }
+        return document.getElementById(target).innerHTML = HTML;
+        
+    }
 // <!-- services end --> 
 
 // <!-- portfolio start --> 
