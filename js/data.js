@@ -1,26 +1,37 @@
 "use strict";
 
-// header
+// <!-- basic start --> 
+// <!-- basic end -->
 
-// hero
+// <!-- layout start --> 
+// <!-- layout end --> 
 
-// clients
+// <!-- header start --> 
+// <!-- header end --> 
 
-// about me
+// <!-- hero start --> 
+// <!-- hero end --> 
 
-// numbers
+// <!-- about me start --> 
+// <!-- about me end --> 
 
-// skills
+// <!-- services start --> 
+// <!-- services end --> 
 
-// latest work
+// <!-- portfolio start --> 
+// <!-- portfolio end --> 
 
-// job history
+// <!-- testimonials start --> 
+// <!-- testimonials end --> 
 
-// services
+// <!-- numbers start --> 
+// <!-- numbers end --> 
 
-// testimonials
+// <!-- our blog start --> 
+// <!-- our blog end --> 
 
-// contact me
+// <!-- contact us start --> 
+// <!-- contact us end --> 
 
-// footer
-
+// <!-- footer start --> 
+// <!-- footer end --> 
