@@ -1,26 +1,32 @@
 "use strict";
 
-// header
+/* <!-- header start --> */
+/* <!-- header end --> */
 
-// hero
+/* <!-- hero start --> */
+/* <!-- hero end --> */
 
-// clients
+/* <!-- about me start --> */
+/* <!-- about me end --> */
 
-// about me
+/* <!-- services start --> */
+/* <!-- services end --> */
 
-// numbers
+/* <!-- portfolio start --> */
+/* <!-- portfolio end --> */
 
-// skills
+/* <!-- testimonials start --> */
+/* <!-- testimonials end --> */
 
-// latest work
+/* <!-- numbers start --> */
+/* <!-- numbers end --> */
 
-// job history
+/* <!-- our blog start --> */
+/* <!-- our blog end --> */
 
-// services
+/* <!-- contact us start --> */
+/* <!-- contact us end --> */
 
-// testimonials
-
-// contact me
-
-// footer
+/* <!-- footer start --> */
+/* <!-- footer end --> */
 
