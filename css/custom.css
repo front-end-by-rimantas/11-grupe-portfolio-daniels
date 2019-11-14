@@ -11,6 +11,28 @@
 /* <!-- hero end --> */
 
 /* <!-- about me start --> */
+
+.me-achiev {
+    display: inline-block;
+    text-align: left;
+}
+    .about-me > .me-img {
+        display: inline-block;
+        width: 40%;
+        float: left;
+    }
+        .me-img > img {
+            display: inline-block;
+            width: 100%;
+            float: right;
+            padding: 0 30px;
+        }
+    .about-me > .info-me {
+        display: inline-block;
+        width: 60%;
+        text-align: left;
+        float: left;
+    }
 /* <!-- about me end --> */
 
 /* <!-- services start --> */
