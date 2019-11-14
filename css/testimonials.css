@@ -1,0 +1,39 @@
+.clients-reviews {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 100px;
+    
+    color: var(--color-text);
+}
+
+.author-img > img{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+p {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: lighter;
+}
+
+h6 {
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+span {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+}
