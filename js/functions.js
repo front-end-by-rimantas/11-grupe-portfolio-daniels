@@ -13,6 +13,55 @@
 // <!-- hero end --> 
 
 // <!-- about me start --> 
+function renderProgress(target, list) {
+    let HTML = '';
+    let valid = 0;
+
+    if (target.length === 0 ||
+        typeof(target) !== 'string' ) {
+        return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
+   }
+    if ( !Array.isArray(list) ) {
+        return console.error('ERROR: Truksta saraso');
+    }
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        if (!item.title ||
+            !item.value) {
+                continue;
+        }
+        if (typeof(item.title) !== 'string' ||
+            typeof(item.value) !== 'number' ||
+            !isFinite(item.value)) {
+                return console.error('ERROR: Data faile nurodykita informacija nera teisinga. Ptikrinkite ar pirma reiksme tekstas ir natra skaicius');
+        }
+        if (item.title.length < 1 || 
+            item.value < 30) {
+                return console.error('ERROR: Data faile nurodytos ne visos kintamuju reiksmes arba permaza procentine reiksme, min 30');
+        }
+        HTML += `<div class="progress-bar">
+                    <div class="texts">
+                        <div class="title">${item.title}</div>
+                    </div>
+                    <div class="bar">
+                        <div class="value" style="width: ${item.value}%">
+                            <div class="loading">
+                             <div class="value">${item.value}%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+            valid++;
+        if (valid === 3) {
+           break;
+        }
+    }
+        if (valid === 0) {
+            return console.error('ERROR: Neivedete nei vienos teisingos reiksmes data.js faile');
+         }
+    return document.querySelector('#progress').innerHTML = HTML;
+}
+
 // <!-- about me end --> 
 
 // <!-- services start --> 
