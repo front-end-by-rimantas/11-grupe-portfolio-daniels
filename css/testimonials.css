@@ -1,20 +1,46 @@
-.clients-reviews {
+.testimonials {
     display: inline-block;
-    width: 100%;
+    width: 90%;
     text-align: center;
-    padding: 100px;
-    
+    overflow: hidden;
     color: var(--color-text);
 }
 
-.author-img > img{
+    .testimonials > .list {
+        display: inline-block;
+        width: 300%; 
+        margin-left: -100%;
+    }
+
+        .testimonials > .list > .item {
+            display: inline-block;
+            width: calc(100% /3);
+            float: left;
+            font-size: 80px;
+            line-height: 80px;
+        }
+
+    .testimonials > .navigation {
+        display: inline-block;
+        width: 100%;
+    }
+
+        .testimonials > .navigation > .bubble {
+
+        }
+
+        .testimonials > .navigation > .bubble > .full-bibble {
+
+        }
+
+.imgFile > img{
     display: inline-block;
     height: 100px;
     width: 100px;
     border-radius: 50%;
 }
 
-p {
+.content {
     display: inline-block;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -23,14 +49,14 @@ p {
     font-weight: lighter;
 }
 
-h6 {
+.author {
     color: var(--color-secondary);
     font-weight: bold;
     font-size: 18px;
     line-height: 18px;
 }
 
-span {
+.occupation {
     display: inline-block;
     margin-top: 10px;
     font-size: 16px;

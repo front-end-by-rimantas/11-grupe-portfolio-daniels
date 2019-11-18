@@ -115,6 +115,32 @@ function renderProgress(target, list) {
 // <!-- portfolio end --> 
 
 // <!-- testimonials start --> 
+
+function generateTestimonials ( testimonials ) {
+    let listHTML = ``;
+
+    testimonials.forEach ( testimonialContent  => {
+        listHTML += `<div class="item">
+                        <div class="imgFile">
+                            <img src="./img/clients/1 (1).jpg" alt="author image">
+                        </div>
+                        <div class="content">${testimonialContent.content}</div>
+                        <div class="author">${testimonialContent.author}</div>
+                        <div class="occupation">${testimonialContent.occupation}</div>    
+                     </div>`;
+    });
+
+
+    return `<div class="testimonials">
+                    <div class="list">${listHTML}</div>
+                    <div class="navigation">
+                        <div class="bubble">
+                            <div class="full-bubble"></div>
+                        </div>
+                    </div>
+                </div>`;
+
+}
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 

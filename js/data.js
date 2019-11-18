@@ -67,7 +67,27 @@ const about = [
 // <!-- portfolio start --> 
 // <!-- portfolio end --> 
 
-// <!-- testimonials start --> 
+// <!-- testimonials start -->
+const testimonials = [
+    {
+        imgFile : 'image',
+        content : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, sunt error? Iste, quae voluptas. Libero odit placeat voluptas autem fugiat, molestiae eius aspernatur quisquam hic nostrum aliquid! Pariatur, placeat amet?',
+        author : 'Alex Smith',
+        occupation : 'Envato customer',
+    },
+    {
+        imgFile : 'image',
+        content : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, sunt error? Iste, quae voluptas. Libero odit placeat voluptas autem fugiat, molestiae eius aspernatur quisquam hic nostrum aliquid! Pariatur, placeat amet?',
+        author : 'John Smith',
+        occupation : 'Envato customer',
+    },
+    {
+        imgFile : 'image',
+        content : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, sunt error? Iste, quae voluptas. Libero odit placeat voluptas autem fugiat, molestiae eius aspernatur quisquam hic nostrum aliquid! Pariatur, placeat amet?',
+        author : 'Daniel Smith',
+        occupation : 'Envato customer',
+    }
+];
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 

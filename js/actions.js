@@ -26,6 +26,7 @@ renderBlocks('services', services );
 // <!-- portfolio end --> 
 
 // <!-- testimonials start --> 
+document.querySelector ( '#testimonials .testimonials' ).innerHTML = generateTestimonials ( testimonials );
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 
