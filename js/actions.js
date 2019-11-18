@@ -7,6 +7,14 @@
 // <!-- layout end --> 
 
 // <!-- header start --> 
+const menu = document.querySelector('#header-cont .fa-bars');
+const header = document.querySelector('#header-cont');
+
+// arrow function
+menu.addEventListener('click', ()=>{
+    header.classList.toggle('mobile-show');
+});
+
 // <!-- header end --> 
 
 // <!-- hero start --> 
