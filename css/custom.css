@@ -29,6 +29,84 @@
 /* <!-- our blog end --> */
 
 /* <!-- contact us start --> */
+.section {
+    display: block;
+    width: 100%;
+
+}
+    h2 {
+        display: inline-block;
+        width: 100%;
+    }
+    .contacts {
+        display: inline-block;
+        width: 100%;
+        float: left;
+        /* background-color: aqua; */
+        
+        
+    }
+        .address {
+            display: inline-block;
+            width: 250px;
+            /* border: 1px solid black; */
+            margin: 20px 30px;
+            
+        }
+            .fa  {
+                padding: 18px;
+                border-radius: 50%;
+                background-color: #F7F7F7;
+                text-decoration: none;
+                
+
+    }
+            h4 {
+                padding: 7px;
+            }
+            p {
+                font-size: 14px;
+                color: #BC918D;
+                /* padding: 0px; */
+                padding: 0, 0, 50, 0;
+            }
+        .email {
+            display: inline-block;
+            width: 250px;
+            /* border: 1px solid black; */
+            margin: 20px 30px;
+        }
+           
+        .phone {
+            display: inline-block;
+            width: 250px;
+            /* border: 1px solid black; */
+            margin: 20px 30px;
+        }
+           
+    form {
+        display: inline-block;
+        width: 880px;
+        
+    }
+        .two-in-row {
+            display: inline-block;
+            width: 50%;
+            float: left;
+            
+
+        }
+        .textarea {
+
+        }
+    .btn {
+
+    }
+
+
+
+
+
 /* <!-- contact us end --> */
 
 /* <!-- footer start --> */
