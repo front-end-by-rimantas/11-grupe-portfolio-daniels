@@ -1,26 +1,83 @@
 "use strict";
 
-// header
+// <!-- basic start --> 
+// <!-- basic end -->
 
-// hero
+// <!-- layout start --> 
+// <!-- layout end --> 
 
-// clients
+// <!-- header start --> 
+// <!-- header end --> 
 
-// about me
+// <!-- hero start --> 
+// <!-- hero end --> 
 
-// numbers
+// <!-- about me start --> 
+const about = [
+    {
+        title: 'Web Design',
+        value: 95
+    },
+    {
+        title: 'Branding',
+        value: 80
+    },
+    {
+        title: 'Development',
+        value: 90
+    },
+]
+// <!-- about me end --> 
 
-// skills
+// <!-- services start --> 
+    const services = [
+        {
+            icon: 'laptop',
+            title: 'Web Design',
+            description: 'Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industrys standard dummy text ever'
+        },
+        {
+            icon: 'bullhorn',
+            title: 'Branding',
+            description: 'Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industrys standard dummy text ever'
+        },
+        {
+            icon: 'umbrella',
+            title: 'Development',
+            description: 'Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industrys standard dummy text ever'
+        },
+        {
+            icon: 'diamond',
+            title: 'Creative Design',
+            description: 'Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industrys standard dummy text ever'
+        },
+        {
+            icon: 'television',
+            title: 'Fully Responsive',
+            description: 'Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industrys standard dummy text ever'
+        },
+        {
+            icon: 'camera',
+            title: 'Retina Ready',
+            description: 'Lorem Ipsum is simply dummy text of the Lorem Ipsum has been the industrys standard dummy text ever'
+        },
+    ]
+// <!-- services end --> 
 
-// latest work
+// <!-- portfolio start --> 
+// <!-- portfolio end --> 
 
-// job history
+// <!-- testimonials start --> 
+// <!-- testimonials end --> 
 
-// services
+// <!-- numbers start --> 
+// <!-- numbers end --> 
 
-// testimonials
+// <!-- our blog start --> 
+// <!-- our blog end --> 
 
-// contact me
+// <!-- contact us start --> 
+// <!-- contact us end --> 
 
-// footer
-
+// <!-- footer start --> 
+// <!-- footer end --> 

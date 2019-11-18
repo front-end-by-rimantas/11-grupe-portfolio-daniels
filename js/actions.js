@@ -1,26 +1,41 @@
 "use strict";
 
-// header
+// <!-- basic start --> 
+// <!-- basic end -->
 
-// hero
+// <!-- layout start --> 
+// <!-- layout end --> 
 
-// clients
+// <!-- header start --> 
+// <!-- header end --> 
 
-// about me
+// <!-- hero start --> 
+// <!-- hero end --> 
 
-// numbers
+// <!-- about me start --> 
+renderProgress('progress', about );
+// <!-- about me end --> 
 
-// skills
+// <!-- services start --> 
 
-// latest work
+renderBlocks('services', services );
 
-// job history
+// <!-- services end --> 
 
-// services
+// <!-- portfolio start --> 
+// <!-- portfolio end --> 
 
-// testimonials
+// <!-- testimonials start --> 
+// <!-- testimonials end --> 
 
-// contact me
+// <!-- numbers start --> 
+// <!-- numbers end --> 
 
-// footer
+// <!-- our blog start --> 
+// <!-- our blog end --> 
 
+// <!-- contact us start --> 
+// <!-- contact us end --> 
+
+// <!-- footer start --> 
+// <!-- footer end --> 
