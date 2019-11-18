@@ -1,0 +1,56 @@
+header {
+    display: inline-block;
+    width: 100%;
+}
+    header > .container{
+        
+    }
+        header > .row {
+            display: inline-block;
+            width: 100%;
+
+        }
+            .nav-logo {
+                display: inline-block;
+                float: left;
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+                line-height: 40px;
+                padding: 0 10px;
+            }
+            header > .row > i {
+                display: inline-block;
+                float: right;
+                color: black;
+                font-size: 20px;
+                padding: 10px 10px;
+                display: none;
+                cursor: pointer;
+            }
+            header > .row > nav {
+                display: inline-block;
+                float: right;
+                padding: 0;
+            }
+            .row > nav > a {
+                display: inline-block;
+                text-decoration: none;
+                color: black;
+                font-size: 16px;
+                padding-top: 10.5px;
+                margin: 0 15px;
+            }
+                .row > nav > a:hover {
+                    border-bottom: 2px solid black;
+                }
+
+@media (max-width: 900px) {
+    header > .row > i {
+        display: inline-block;
+    }
+    header > .row > nav {
+        display: none;
+    }
+}    
+
