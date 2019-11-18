@@ -32,6 +32,7 @@
 .section {
     display: block;
     width: 100%;
+    margin-top: 100px;
 
 }
     h2 {
@@ -50,7 +51,7 @@
             display: inline-block;
             width: 250px;
             /* border: 1px solid black; */
-            margin: 20px 30px;
+            /* margin: 20px 30px; */
             
         }
             .fa  {
@@ -74,30 +75,47 @@
             display: inline-block;
             width: 250px;
             /* border: 1px solid black; */
-            margin: 20px 30px;
+            /* margin: 20px 30px; */
         }
            
         .phone {
             display: inline-block;
             width: 250px;
             /* border: 1px solid black; */
-            margin: 20px 30px;
+            /* margin: 20px 30px; */
         }
            
     form {
         display: inline-block;
         width: 880px;
         
+        
     }
         .two-in-row {
             display: inline-block;
-            width: 50%;
+            width: 45%;
             float: left;
+            background-color:  #F7F7F7;
+            border-radius: 5px;
+            font-size: 15px;
+            line-height: 20px;
             
-
         }
-        .textarea {
-
+        .two-in-row:last-of-type {
+            margin-left: 10%;
+        }
+        form > textarea {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            resize: vertical;
+            margin-top: 10px;
+            background-color:  #F7F7F7;
+            border-radius: 5px;
+            min-height: 130px;
+            max-height: 350px;
+            font-size: 15px;
+            line-height: 20px;
         }
     .btn {
 
