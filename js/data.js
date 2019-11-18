@@ -13,6 +13,20 @@
 // <!-- hero end --> 
 
 // <!-- about me start --> 
+const about = [
+    {
+        title: 'Web Design',
+        value: 95
+    },
+    {
+        title: 'Branding',
+        value: 80
+    },
+    {
+        title: 'Development',
+        value: 90
+    },
+]
 // <!-- about me end --> 
 
 // <!-- services start --> 
