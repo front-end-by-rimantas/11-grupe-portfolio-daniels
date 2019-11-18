@@ -13,6 +13,7 @@
 // <!-- hero end --> 
 
 // <!-- about me start --> 
+renderProgress('progress', about );
 // <!-- about me end --> 
 
 // <!-- services start --> 
