@@ -125,6 +125,95 @@
 /* <!-- our blog end --> */
 
 /* <!-- contact us start --> */
+.section {
+    display: block;
+    width: 100%;
+    margin-top: 100px;
+}
+    h2 {
+        display: inline-block;
+        width: 100%;
+    }
+    .contacts {
+        display: inline-block;
+        width: 100%;
+        float: left;
+    }
+        .address {
+            display: inline-block;
+            width: 250px;
+            margin: 20px 30px;
+        }
+            .fa  {
+                padding: 18px;
+                border-radius: 50%;
+                background-color: #F7F7F7;
+                color: #748182;
+                text-decoration: none;
+            }
+            .fa:hover{
+                background-color: #1C1C1C;
+                color: white;
+            }
+            h4 {
+                padding: 7px;
+                margin-top: 5px;
+            }
+            p {
+                font-size: 14px;
+                color: #748182;
+                padding: 0, 0, 50, 0;
+                margin-top: 5px;
+            }
+        .email {
+            display: inline-block;
+            width: 250px;
+            margin: 20px 30px;
+        }
+        .phone {
+            display: inline-block;
+            width: 250px;
+            margin: 20px 30px;
+        }
+           
+    form {
+        display: inline-block;
+        width: 880px;
+        padding-top: 30px;
+    }
+        .two-in-row {
+            display: inline-block;
+            width: 45%;
+            float: left;
+            background-color:  #F7F7F7;
+            border-radius: 5px;
+            font-size: 15px;
+            line-height: 20px;
+            border: none;
+        }
+        .two-in-row:last-of-type {
+            margin-left: 10%;
+        }
+        form > textarea {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            resize: vertical;
+            margin-top: 10px;
+            background-color:  #F7F7F7;
+            border-radius: 5px;
+            min-height: 130px;
+            max-height: 350px;
+            font-size: 15px;
+            line-height: 20px;
+            border: none;
+        }
+    
+
+
+
+
+
 /* <!-- contact us end --> */
 
 /* <!-- footer start --> */
