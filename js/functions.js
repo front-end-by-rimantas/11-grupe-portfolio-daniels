@@ -7,6 +7,67 @@
 // <!-- layout end --> 
 
 // <!-- header start --> 
+function headerScroll() {
+    //curent height position
+    const headerHeight = document.querySelector('#header-cont').offsetHeight;
+    //position with header height
+    const height = window.scrollY + headerHeight;
+    //positions of sections mentioned in nav element 
+    const DOMlinks = document.querySelectorAll('#header-cont nav a');
+    //put all positions id to array
+    let links = [];
+    //id extraction, gives back all menu id
+    for ( let i=0; i<DOMlinks.length; i++ ) {
+        const element = DOMlinks[i];
+        const href = element.href;
+        const split = href.split('#');
+
+        if ( split.length > 1 ) {
+            links.push('#'+split[1]);
+        }
+    }
+    // Search of meniu positions height
+    let sectionHeights = [];
+    for ( let i=0; i<links.length; i++ ) {
+        const link = links[i];
+        if ( link === '#' ) {
+            sectionHeights.push(0);
+            console.log(sectionHeights);
+            continue;
+        }
+        //Menu sections top position
+        const section = document.querySelector(link);       // '#section'
+        sectionHeights.push(section.offsetTop);
+    }
+    // Closest section
+    let currentSectionImIn = 0;
+    for ( let i=0; i<sectionHeights.length; i++ ) {
+        if ( sectionHeights[i] > height ) {
+            break;
+        }
+        currentSectionImIn = i;
+    }
+    
+    // Remove class active from element which has it
+        document.querySelector(`#header-cont nav a.activated`).classList.remove('activated')
+
+    
+
+    // Class active addition
+    document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`).classList.add('activated');
+
+
+ return;
+
+}
+  
+
+
+
+
+
+
+
 // <!-- header end --> 
 
 // <!-- hero start --> 
