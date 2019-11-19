@@ -7,7 +7,7 @@
     .container > .row {
         display: inline-block;
         width: 1200px;
-        margin: 10px calc( 50% - 600px ) ;
+        margin: 0px calc( 50% - 600px ) ;
         text-align: center;
     }
         .container > .row > .section {
@@ -44,25 +44,25 @@ footer {
 @media (max-width: 1300px) {
     .container > .row {
         width: 1000px;
-        margin: 10px calc( 50% - 500px ) ;       
+        margin: 0 calc( 50% - 500px ) ;       
     }
 }
 @media (max-width: 1100px) {
     .container > .row {
         width: 800px;
-        margin: 10px calc( 50% - 400px ) ;       
+        margin: 0 calc( 50% - 400px ) ;       
     }
 }
 @media (max-width: 900px) {
     .container > .row {
         width: 700px;
-        margin: 10px calc( 50% - 350px ) ;       
+        margin: 0 calc( 50% - 350px ) ;       
     }
 }
 @media (max-width: 800px) {
     .container > .row {
         width: 500px;
-        margin: 10px calc( 50% - 250px ) ;
+        margin: 0 calc( 50% - 250px ) ;
     }
 }
 @media (max-width: 550px) {

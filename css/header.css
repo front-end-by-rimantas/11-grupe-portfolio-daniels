@@ -1,56 +1,133 @@
 header {
     display: inline-block;
     width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
 }
-    header > .container{
-        
+    .nav-logo {
+        display: inline-block;
+        float: left;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        line-height: 25px;
+        padding: 0 10px;
     }
-        header > .row {
+    header > .row > i {
+        display: inline-block;
+        float: right;
+        color: black;
+        font-size: 25px;
+        padding: 0 8px 5px;
+        display: none;
+        cursor: pointer;
+        position: relative;
+    }
+    header > .row > nav {
+        display: inline-block;
+        float: right;
+        padding: 0;
+    }
+        header > .row > nav > .list {
             display: inline-block;
-            width: 100%;
-
+            float: left;
         }
-            .nav-logo {
-                display: inline-block;
-                float: left;
-                text-decoration: none;
-                color: black;
-                font-size: 20px;
-                line-height: 40px;
-                padding: 0 10px;
-            }
-            header > .row > i {
-                display: inline-block;
-                float: right;
-                color: black;
-                font-size: 20px;
-                padding: 10px 10px;
-                display: none;
-                cursor: pointer;
-            }
-            header > .row > nav {
-                display: inline-block;
-                float: right;
-                padding: 0;
-            }
-            .row > nav > a {
+            nav > .list > a {
                 display: inline-block;
                 text-decoration: none;
                 color: black;
                 font-size: 16px;
-                padding-top: 10.5px;
+                padding-top: 2.5px;
                 margin: 0 15px;
+                position: relative;
             }
-                .row > nav > a:hover {
-                    border-bottom: 2px solid black;
-                }
-
+            a.activated::after {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 2px;
+                background-color: black;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                animation-name: headerMenuForward;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1;
+            }
+            a.deactivated::after {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 2px;
+                background-color: black;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                animation-name: headerMenuBackward;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1;
+            }
+@keyframes headerMenuForward {
+    from {width: 0;}
+    to {width: 100%;}
+} 
+@keyframes headerMenuBackward {
+    from {width: 100%;}
+    to {width: 0;}
+} 
 @media (max-width: 900px) {
-    header > .row > i {
-        display: inline-block;
+    .mobile {
+        padding: 0; 
     }
-    header > .row > nav {
-        display: none;
-    }
+        .mobile > .row {
+            width: 100%;
+            margin: 20px 0;
+        }
+            header > .row > a {
+                display: inline-block;
+                margin-left: 10px;
+            }
+            header > .row > i {
+                display: inline-block;
+                margin-right: 10px;
+            }
+            header > .row > nav {
+                display: none;
+            }
+            header.mobile-show > .row > nav {
+                display: none;
+                background-color: white;
+                display: block;
+                width: 100%;
+                margin-top: 15px;
+                padding: 15px 0;
+            }
+                .mobile-show > .row > nav > .list {
+                    width: 100%;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin: 10px 0;
+                    text-align: center;
+                    padding-top: 20px 0;
+                }
 }    
+@media (max-width: 800px) {
+    header > .row {
+        width: 100%;
+    }
+}
+@media (max-width: 550px) {
+    header > .row {
+        width: 100%;
+    }
+}
 

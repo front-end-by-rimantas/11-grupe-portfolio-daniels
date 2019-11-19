@@ -5,9 +5,20 @@
 /* <!-- layout end --> */
 
 /* <!-- header start --> */
+
 /* <!-- header end --> */
 
 /* <!-- hero start --> */
+.hero-bg {
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/other/bg.jpg);
+}
+    .hero-bg > .row {
+        margin-top: 200px;
+
+    }
 /* <!-- hero end --> */
 
 /* <!-- about me start --> */
@@ -21,7 +32,7 @@
         width: 40%;
         float: left;
         position: relative;
-        z-index: 2;
+        z-index: 1;
     }
     .about-me > .me-img:after {
         display: inline-block;
