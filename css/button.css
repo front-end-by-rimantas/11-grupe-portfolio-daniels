@@ -23,7 +23,4 @@
         background-color: var(--color-secondary);
         color: white;
     }
-    #submit {
-        display: inline-block;
-        float: left;
-    }
+    
