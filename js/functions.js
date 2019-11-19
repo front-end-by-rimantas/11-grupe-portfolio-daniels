@@ -7,6 +7,10 @@
 // <!-- layout end --> 
 
 // <!-- header start --> 
+
+//for croll direction
+var lastScrollPosition = 0;
+
 function headerScroll() {
     //curent height position
     const headerHeight = document.querySelector('#header-cont').offsetHeight;
@@ -32,7 +36,6 @@ function headerScroll() {
         const link = links[i];
         if ( link === '#' ) {
             sectionHeights.push(0);
-            console.log(sectionHeights);
             continue;
         }
         //Menu sections top position
@@ -46,23 +49,50 @@ function headerScroll() {
             break;
         }
         currentSectionImIn = i;
+        console.log(currentSectionImIn);
+        
+        
+    }
+//scroll direction
+if (window.scrollY < 700) {
+    document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`)
+        .classList.add('activated');
+}else {
+
+    var newScrollPosition = window.scrollY;
+        if (newScrollPosition < lastScrollPosition) {
+        
+            console.log("up");
+            console.log(newScrollPosition);
+        }else{
+
+            document.querySelector(`#header-cont nav a.activated`)
+                .classList.remove('activated');
+                document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`)
+                .classList.add('deactivated');
+
+            document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`)
+                .classList.add('activated');
+            // document.querySelector(`#header-cont nav a.deactivated`)
+            //     .classList.remove('deactivated')
+
+
+            
+            console.log("DOWN");
+            console.log(newScrollPosition);   
+        }
+    
+        lastScrollPosition = newScrollPosition;
+            
     }
     
-    // Remove class active from element which has it
-        document.querySelector(`#header-cont nav a.activated`).classList.remove('activated')
 
-    
-
-    // Class active addition
-    document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`).classList.add('activated');
-
-
- return;
-
+    // // Remove class active from element which has it
+    //     document.querySelector(`#header-cont nav a.activated`).classList.remove('activated')
+    // // Class active addition
+    // document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`).classList.add('activated');
 }
   
-
-
 
 
 
