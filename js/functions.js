@@ -9,7 +9,6 @@
 // <!-- header start --> 
 
 //for croll direction
-var lastScrollPosition = 0;
 
 function headerScroll() {
     //curent height position
@@ -49,55 +48,47 @@ function headerScroll() {
             break;
         }
         currentSectionImIn = i;
-        console.log(currentSectionImIn);
-        
-        
+        console.log(currentSectionImIn);  
     }
-//scroll direction
-if (window.scrollY < 700) {
-    document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`)
-        .classList.add('activated');
-}else {
-
-    var newScrollPosition = window.scrollY;
-        if (newScrollPosition < lastScrollPosition) {
-        
-            console.log("up");
-            console.log(newScrollPosition);
-        }else{
-
-            document.querySelector(`#header-cont nav a.activated`)
-                .classList.remove('activated');
-                document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`)
-                .classList.add('deactivated');
-
-            document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`)
-                .classList.add('activated');
-            // document.querySelector(`#header-cont nav a.deactivated`)
-            //     .classList.remove('deactivated')
-
-
-            
-            console.log("DOWN");
-            console.log(newScrollPosition);   
-        }
-    
-        lastScrollPosition = newScrollPosition;
-            
-    }
-    
-
     // // Remove class active from element which has it
-    //     document.querySelector(`#header-cont nav a.activated`).classList.remove('activated')
+    document.querySelector(`#header-cont nav a.active`).classList.remove('active')
     // // Class active addition
-    // document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`).classList.add('activated');
+    document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`).classList.add('active');
+    
+    
+    // Header visibility
+    if ( currentSectionImIn >= 1) {
+        document.querySelector('#header-cont').classList.add('header-visible');
+        let aColor = document.querySelectorAll('nav > .list > a');
+        for (let i = 0; i < aColor.length; i++) {
+            aColor[i].classList.add('header-color');
+        }
+        document.querySelector('header > .row a').classList.add('header-color');
+        document.querySelector('header > .row > i').classList.add('header-color');
+    } else {
+        document.querySelector('#header-cont').classList.remove('header-visible');
+        let aColor = document.querySelectorAll('nav > .list > a');
+        for (let i = 0; i < aColor.length; i++) {
+            aColor[i].classList.remove('header-color');
+        }
+        document.querySelector('header > .row a').classList.remove('header-color');
+        document.querySelector('header > .row > i').classList.remove('header-color');
+    }
+    
+    return;
+
+
+
 }
-  
-
-
-
-
-
+function headerHide() {
+    if ( window.scrollY < 80 ) {
+        document.querySelector('#header-cont').classList.remove('header-hide');
+    } else {
+        document.querySelector('#header-cont').classList.add('header-hide');
+    }
+    
+    return;
+}
 // <!-- header end --> 
 
 // <!-- hero start --> 

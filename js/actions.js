@@ -17,6 +17,7 @@ menu.addEventListener('click', ()=>{
 // on scroll event
 window.addEventListener('scroll', headerScroll);
 headerScroll();
+window.addEventListener('scroll', headerHide);
 
 // <!-- header end --> 
 

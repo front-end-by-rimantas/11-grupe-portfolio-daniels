@@ -9,11 +9,36 @@ header {
     right: 0;
     z-index: 3;
 }
+.header-hide {
+    display: none;
+}
+.header-visible {
+    display: inline-block;
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    box-shadow: 5px 5px 200px var(--color-text);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: #ffffff;
+    animation-name: header;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes header {
+    0%   {height: 65px;}
+  50%  {height: 85px;}
+  100% {height: 65px;}
+}
+
     .nav-logo {
         display: inline-block;
         float: left;
         text-decoration: none;
-        color: black;
+        color:white;
         font-size: 20px;
         line-height: 25px;
         padding: 0 10px;
@@ -21,7 +46,7 @@ header {
     header > .row > i {
         display: inline-block;
         float: right;
-        color: black;
+        color: white;
         font-size: 25px;
         padding: 0 8px 5px;
         display: none;
@@ -40,48 +65,40 @@ header {
             nav > .list > a {
                 display: inline-block;
                 text-decoration: none;
-                color: black;
+                color: white;
                 font-size: 16px;
                 padding-top: 2.5px;
                 margin: 0 15px;
                 position: relative;
             }
-            a.activated::after {
-                content: '';
+            nav > .list > a::after {
                 display: inline-block;
-                width: 100%;
-                height: 2px;
-                background-color: black;
-                position: absolute;
-                bottom: 0px;
-                left: 0;
-                animation-name: headerMenuForward;
-                animation-duration: 2s;
-                animation-fill-mode: forwards;
-                animation-iteration-count: 1;
-            }
-            a.deactivated::after {
                 content: '';
-                display: inline-block;
-                width: 100%;
                 height: 2px;
-                background-color: black;
                 position: absolute;
-                bottom: 0px;
-                left: 0;
-                animation-name: headerMenuBackward;
-                animation-duration: 2s;
-                animation-fill-mode: forwards;
-                animation-iteration-count: 1;
+                left: 0%;
+                right: 100%;
+                bottom: -5px;
+                background-color:white;
+                transition: all 300ms;
             }
-@keyframes headerMenuForward {
-    from {width: 0;}
-    to {width: 100%;}
-} 
-@keyframes headerMenuBackward {
-    from {width: 100%;}
-    to {width: 0;}
-} 
+            nav > .list > .header-color::after {
+                background-color: black;
+            }
+            nav > .list > a:hover::after,
+            nav > .list > a.active::after {
+                left: 0%;
+                right: 0%;
+            }
+            nav > .list > .header-color {
+                color: black;
+            }
+            .row > .header-color {
+                color: black;
+            }
+            header > .row > .header-color{
+                color: black;
+            }
 @media (max-width: 900px) {
     .mobile {
         padding: 0; 
@@ -119,6 +136,9 @@ header {
                     text-align: center;
                     padding-top: 20px 0;
                 }
+                    nav > .list > a {
+                        color: black;
+                    }
 }    
 @media (max-width: 800px) {
     header > .row {
