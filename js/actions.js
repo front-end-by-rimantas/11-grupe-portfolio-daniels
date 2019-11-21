@@ -14,6 +14,10 @@ const header = document.querySelector('#header-cont');
 menu.addEventListener('click', ()=>{
     header.classList.toggle('mobile-show');
 });
+// on scroll event
+window.addEventListener('scroll', headerScroll);
+headerScroll();
+window.addEventListener('scroll', headerHide);
 
 // <!-- header end --> 
 
