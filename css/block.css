@@ -77,6 +77,41 @@
 /* <!-- testimonials end --> */
 
 /* <!-- numbers start --> */
+.numbers {
+    display: inline-block;
+    width: calc((100% - 120px) / 4);
+    float: left;
+    margin: 15px;
+    padding: 45px 0;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 0;
+}
+    .numbers i {
+        display: inline-block;
+        font-size: 30px;
+        line-height: 30px;       
+        padding: 0px;
+        margin: 10px 0;
+    }
+    .numbers .value {
+        display: inline-block;
+        width: 100%;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        margin: 10px 0;
+        color: var(--color-secondary);
+    }
+    .numbers h4 {
+        display: inline-block;
+        width: 100%;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: normal;
+        margin: 10px 0;
+        color: var(--color-text);
+    }
 /* <!-- numbers end --> */
 
 /* <!-- our blog start --> */

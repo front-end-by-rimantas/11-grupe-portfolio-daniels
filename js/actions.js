@@ -41,6 +41,9 @@ renderBlocks('services', services );
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 
+
+renderNumbers('numbers', numbers );
+// numbersAnimation();
 // <!-- numbers end --> 
 
 // <!-- our blog start --> 

@@ -200,6 +200,70 @@ function renderProgress(target, list) {
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 
+function renderNumbers(target, list) {
+    let HTML = '';
+    let valid = 0;
+
+    if ( target.length === 0 ||
+        typeof(target) !== 'string' ) {
+        return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
+    }
+    if ( !Array.isArray(list) ) {
+        return console.error('ERROR: Truksta saraso');
+    }
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        if (!item.icon
+            || !item.title
+            || !item.value) {
+                continue;
+        }
+        if (typeof(item.icon) !== 'string' 
+            || typeof(item.title) !== 'string' 
+            || !isFinite(item.value)) {
+                return console.error('ERROR: Data faile nurodykita informacija nera tekstas arba value nera skaicius');
+        }
+        if (item.icon.length < 1 
+            || item.title.length < 1 
+            || item.value < 1) {
+                return console.error('ERROR: Data faile nurodytos ne visos arba netinkamos kintamuju reiksmes');
+        }
+                
+        HTML += `<div class="block numbers">
+                    <div class="row">
+                        <i class=" fa fa-${item.icon}" ></i>
+                        <div class="value">${item.value}</div>
+                        <h4>${item.title}</h4>
+                    </div>
+                    </div>`;
+        valid++;
+        if (valid === 4) {
+            break;
+        }
+    }
+        if (valid === 0) {
+            return console.error('ERROR: Neivedete nei vienos teisingos reiksmes data.js faile');
+            }
+        return document.getElementById(target).innerHTML = HTML;
+}
+
+// function numbersAnimation(params) {
+    
+
+
+
+// //curent height position
+// const headerHeight = document.querySelector('#header-cont').offsetHeight;
+// //Needed section height 
+// const numbersHeight = document.querySelector('#numbers').offsetHeight;
+// //Current position with header height
+// const currentHeight = window.scrollY + headerHeight;
+
+// $(".numbers .row .value").counterUP({delay:10, time:1000});
+
+
+// }
+
 // <!-- numbers end --> 
 
 // <!-- our blog start --> 

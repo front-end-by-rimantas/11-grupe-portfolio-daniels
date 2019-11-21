@@ -71,6 +71,28 @@ const about = [
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 
+const numbers = [
+    {
+        icon: 'users',
+        value: 850,
+        title: 'Happy Customers'
+    },
+    {
+        icon: 'thumbs-up',
+        value: 230,
+        title: 'Complete Projects'
+    },
+    {
+        icon: 'bullhorn',
+        value: 9450,
+        title: 'Lines Of Code'
+    },
+    {
+        icon: 'cloud-download',
+        value: 780,
+        title: 'Files Downloaded'
+    },
+]
 // <!-- numbers end --> 
 
 // <!-- our blog start --> 
