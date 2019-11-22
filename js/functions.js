@@ -232,7 +232,7 @@ function renderNumbers(target, list) {
         HTML += `<div class="block numbers">
                     <div class="row">
                         <i class=" fa fa-${item.icon}" ></i>
-                        <div class="value">${item.value}</div>
+                        <div class="value" id="${'count' + i}">${item.value}</div>
                         <h4>${item.title}</h4>
                     </div>
                     </div>`;
@@ -247,9 +247,49 @@ function renderNumbers(target, list) {
         return document.getElementById(target).innerHTML = HTML;
 }
 
-// function numbersAnimation(params) {
-    
 
+
+function countUp(numbers, list) {
+// for (let j = 0; j < list.length; j++) {
+//     var elem = document.getElementById("count");   
+//     var value = 0;
+//     let stopValue = document.getElementById("count").textContent;
+//     let stop = +stopValue;
+//     var id = setInterval(frame, 10);
+//     function frame() {
+//       if (value == stop) {
+//         clearInterval(id);
+//       } else {
+//         value++; 
+//         elem.innerHTML  = value; 
+//       }
+//     }
+    
+// }
+    var elem = document.getElementById("count0");   
+    var value = 0;
+    let stopValue = document.getElementById("count0").textContent;
+    let stop = +stopValue;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (value == stop) {
+        clearInterval(id);
+      } else {
+        value++; 
+        elem.innerHTML  = value; 
+      }
+    }
+  }
+
+// function numbersAnimation() {
+    
+// let countDown = document.getElementById('#count');
+
+// let countItDown = function () {
+// count.textContent = parseFloat(count.textContent) - 1
+    
+// };
+// window.setInterval(countItDown, );
 
 
 // //curent height position

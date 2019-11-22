@@ -43,6 +43,7 @@ renderBlocks('services', services );
 // <!-- numbers start --> 
 
 renderNumbers('numbers', numbers );
+countUp();
 // numbersAnimation();
 // <!-- numbers end --> 
 
