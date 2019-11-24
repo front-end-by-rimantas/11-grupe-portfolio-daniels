@@ -112,6 +112,17 @@
         margin: 10px 0;
         color: var(--color-text);
     }
+    @media (max-width: 900px) {
+        .numbers {
+            width: calc((100% - 60px) / 2);
+        }
+    }
+    @media (max-width: 500px) {
+        .numbers {
+            width: calc((100% - 30px));
+            padding: 15px 0;
+        }
+    }
 /* <!-- numbers end --> */
 
 /* <!-- our blog start --> */

@@ -27,6 +27,12 @@ const about = [
         value: 90
     },
 ]
+//Element on screen options
+const options = {
+    root: null,
+    treshold: 0.1,
+    rootMargin: "-200px 0px -300px 0px"
+};
 // <!-- about me end --> 
 
 // <!-- services start --> 

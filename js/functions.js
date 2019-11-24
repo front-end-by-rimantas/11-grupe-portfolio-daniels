@@ -8,13 +8,12 @@
 
 // <!-- header start --> 
 
-//for croll direction
-
+//for scroll direction
 function headerScroll() {
     //curent height position
     const headerHeight = document.querySelector('#header-cont').offsetHeight;
     //position with header height
-    const height = window.scrollY + headerHeight;
+    const height = window.scrollY + headerHeight + 150;
     //positions of sections mentioned in nav element 
     const DOMlinks = document.querySelectorAll('#header-cont nav a');
     //put all positions id to array
@@ -24,7 +23,6 @@ function headerScroll() {
         const element = DOMlinks[i];
         const href = element.href;
         const split = href.split('#');
-
         if ( split.length > 1 ) {
             links.push('#'+split[1]);
         }
@@ -48,13 +46,12 @@ function headerScroll() {
             break;
         }
         currentSectionImIn = i;
-        console.log(currentSectionImIn);  
+        // console.log(currentSectionImIn);  
     }
     // // Remove class active from element which has it
     document.querySelector(`#header-cont nav a.active`).classList.remove('active')
     // // Class active addition
     document.querySelector(`#header-cont nav a[href="${links[currentSectionImIn]}"]`).classList.add('active');
-    
     
     // Header visibility
     if ( currentSectionImIn >= 1) {
@@ -74,19 +71,15 @@ function headerScroll() {
         document.querySelector('header > .row a').classList.remove('header-color');
         document.querySelector('header > .row > i').classList.remove('header-color');
     }
-    
     return;
-
-
-
 }
+//Header hidden on scroll
 function headerHide() {
     if ( window.scrollY < 80 ) {
         document.querySelector('#header-cont').classList.remove('header-hide');
     } else {
         document.querySelector('#header-cont').classList.add('header-hide');
     }
-    
     return;
 }
 // <!-- header end --> 
@@ -95,14 +88,14 @@ function headerHide() {
 // <!-- hero end --> 
 
 // <!-- about me start --> 
+//Progress-bars rendering
 function renderProgress(target, list) {
     let HTML = '';
     let valid = 0;
-
     if (target.length === 0 ||
         typeof(target) !== 'string' ) {
         return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
-   }
+    }
     if ( !Array.isArray(list) ) {
         return console.error('ERROR: Truksta saraso');
     }
@@ -120,41 +113,52 @@ function renderProgress(target, list) {
         if (item.title.length < 1 || 
             item.value < 30) {
                 return console.error('ERROR: Data faile nurodytos ne visos kintamuju reiksmes arba permaza procentine reiksme, min 30');
-        }
+        }    
         HTML += `<div class="progress-bar">
                     <div class="texts">
                         <div class="title">${item.title}</div>
                     </div>
                     <div class="bar">
                         <div class="value" style="width: ${item.value}%">
-                            <div class="loading">
+                            <div class="" id="${'ok' + i}">
                              <div class="value">${item.value}%</div>
                             </div>
                         </div>
                     </div>
                 </div>`
-            valid++;
+                valid++;
         if (valid === 3) {
            break;
         }
     }
         if (valid === 0) {
             return console.error('ERROR: Neivedete nei vienos teisingos reiksmes data.js faile');
-         }
+        }
     return document.querySelector('#progress').innerHTML = HTML;
 }
-
+//Bar animation while on screen
+const sectionInfo = document.querySelector('#progress');
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return; 
+        }
+        for (let i = 0; i < about.length; i++) {
+            document.querySelector('#ok' + [i]).classList.toggle('loading');
+        }
+        observer.unobserve(entry.target);
+    });
+}, options);
 // <!-- about me end --> 
 
 // <!-- services start --> 
     function renderBlocks(target, list) {
         let HTML = '';
         let valid = 0;
-
         if ( target.length === 0 ||
             typeof(target) !== 'string' ) {
             return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
-       }
+        }    
         if ( !Array.isArray(list) ) {
             return console.error('ERROR: Truksta saraso');
         }
@@ -187,10 +191,9 @@ function renderProgress(target, list) {
         }
             if (valid === 0) {
                 return console.error('ERROR: Neivedete nei vienos teisingos reiksmes data.js faile');
-             }
+            }
         return document.getElementById(target).innerHTML = HTML;
     }
-
 // <!-- services end --> 
 
 // <!-- portfolio start --> 
@@ -203,7 +206,6 @@ function renderProgress(target, list) {
 function renderNumbers(target, list) {
     let HTML = '';
     let valid = 0;
-
     if ( target.length === 0 ||
         typeof(target) !== 'string' ) {
         return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
@@ -227,8 +229,7 @@ function renderNumbers(target, list) {
             || item.title.length < 1 
             || item.value < 1) {
                 return console.error('ERROR: Data faile nurodytos ne visos arba netinkamos kintamuju reiksmes');
-        }
-                
+        }      
         HTML += `<div class="block numbers">
                     <div class="row">
                         <i class=" fa fa-${item.icon}" ></i>
@@ -246,14 +247,25 @@ function renderNumbers(target, list) {
             }
         return document.getElementById(target).innerHTML = HTML;
 }
-//Find hhow many numbers we have
+//Numbers count UP animation and countup when on screen
+const sectionNumbers = document.querySelector('#containerNumbers');
+const observerNum = new IntersectionObserver(function(entriesN, observerNum) {
+    entriesN.forEach(entry => {  
+        if (!entry.isIntersecting) {
+            return; 
+        }
+        goUp(numbers);
+        observerNum.unobserve(entry.target);
+    });
+}, options);
+//Find how many numbers we have
 function goUp(numbers) {
     let repeat = 0;
     for (let j = 0; j < numbers.length; j++) {
         countUp(j)
         repeat++;
-}
     }
+}
 //Numbers count UP functions add for each number which schould countUp 
 function countUp(j) {
 //Find smallest number
@@ -270,15 +282,15 @@ let elem = document.getElementById('count' + [j]);
 let stopValue = document.getElementById('count' + [j]).textContent;
 let value = 0;
 let stop = +stopValue;
-let id = setInterval(frame, 1);
+let id = setInterval(frame, 7);
 let speed = Math.round(stop/min);
     function frame() {
-    if (value == stop) {
-        clearInterval(id);
-    } else {
-        value = value + 1 * (speed + 1); 
-        elem.innerHTML  = value; 
-    }
+        if (value == stop) {
+            clearInterval(id);
+        } else {
+            value = value + 1 * (speed + 1); 
+            elem.innerHTML  = value; 
+        }
     }
 }
 // <!-- numbers end --> 
@@ -291,3 +303,22 @@ let speed = Math.round(stop/min);
 
 // <!-- footer start --> 
 // <!-- footer end --> 
+
+
+// const sectionInfo = document.querySelector('.info-me');
+
+// const options = {
+//     root: null,
+//     treshold: 0.25,
+//     rootMargin: "-200px 0px -400px 0px"
+
+// };
+
+// const observer = new IntersectionObserver(function(entries, observer) {
+//     entries.forEach(entry => {
+//         // console.log(entry.target);
+        
+//     });
+    
+// }, options);
+// observer.observe(sectionInfo);
