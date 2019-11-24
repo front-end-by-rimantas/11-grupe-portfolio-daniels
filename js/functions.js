@@ -246,63 +246,71 @@ function renderNumbers(target, list) {
             }
         return document.getElementById(target).innerHTML = HTML;
 }
-
-
-
-function countUp(numbers, list) {
-// for (let j = 0; j < list.length; j++) {
-//     var elem = document.getElementById("count");   
-//     var value = 0;
-//     let stopValue = document.getElementById("count").textContent;
-//     let stop = +stopValue;
-//     var id = setInterval(frame, 10);
-//     function frame() {
-//       if (value == stop) {
-//         clearInterval(id);
-//       } else {
-//         value++; 
-//         elem.innerHTML  = value; 
-//       }
-//     }
-    
-// }
-    var elem = document.getElementById("count0");   
-    var value = 0;
-    let stopValue = document.getElementById("count0").textContent;
+//Numbers count UP functions, need to add for each number which schould countUp 
+function countUp() {
+    let elem = document.getElementById('count0');  
+    let stopValue = document.getElementById('count0').textContent;
+    let value = 0;
     let stop = +stopValue;
-    var id = setInterval(frame, 10);
+    let id = setInterval(frame, 1);
     function frame() {
-      if (value == stop) {
+    if (value == stop) {
         clearInterval(id);
-      } else {
-        value++; 
+    } else {
+        value = value + 1 * 5; 
         elem.innerHTML  = value; 
-      }
     }
-  }
-
-// function numbersAnimation() {
+}
+}
+function countUp1() {
+    let elem = document.getElementById('count1');  
+    let stopValue = document.getElementById('count1').textContent;
+        let value = 0;
+        let stop = +stopValue;
+        let id = setInterval(frame, 1);
+        function frame() {
+        if (value == stop) {
+            clearInterval(id);
+        } else {
+            value++ 
+            elem.innerHTML  = value; 
+            
+        }
+    }
+}
+function countUp2() {
+    let elem = document.getElementById('count2');  
+    let stopValue = document.getElementById('count2').textContent;
+        let value = 0;
+        let stop = +stopValue;
+        let id = setInterval(frame, 1);
+        function frame() {
+        if (value == stop) {
+            clearInterval(id);
+        } else {
+            value = value + 1 * 42; 
+            elem.innerHTML  = value; 
+            
+        }
+    }
+}
+function countUp3() {
+    let elem = document.getElementById('count3');  
+    let stopValue = document.getElementById('count3').textContent;
+        let value = 0;
+        let stop = +stopValue;
+        let id = setInterval(frame, 1);
+        function frame() {
+        if (value == stop) {
+            clearInterval(id);
+        } else {
+            value = value + 1 * 4;
+            elem.innerHTML  = value; 
+            
+        }
+    }
+}
     
-// let countDown = document.getElementById('#count');
-
-// let countItDown = function () {
-// count.textContent = parseFloat(count.textContent) - 1
-    
-// };
-// window.setInterval(countItDown, );
-
-
-// //curent height position
-// const headerHeight = document.querySelector('#header-cont').offsetHeight;
-// //Needed section height 
-// const numbersHeight = document.querySelector('#numbers').offsetHeight;
-// //Current position with header height
-// const currentHeight = window.scrollY + headerHeight;
-
-// $(".numbers .row .value").counterUP({delay:10, time:1000});
-
-
-// }
 
 // <!-- numbers end --> 
 
