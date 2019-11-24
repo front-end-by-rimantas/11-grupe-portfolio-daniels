@@ -43,11 +43,8 @@ renderBlocks('services', services );
 // <!-- numbers start --> 
 
 renderNumbers('numbers', numbers );
-countUp();
-countUp1();
-countUp2();
-countUp3();
-// numbersAnimation();
+goUp(numbers);
+// countUp(numbers);
 // <!-- numbers end --> 
 
 // <!-- our blog start --> 

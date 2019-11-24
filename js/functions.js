@@ -246,72 +246,41 @@ function renderNumbers(target, list) {
             }
         return document.getElementById(target).innerHTML = HTML;
 }
-//Numbers count UP functions, need to add for each number which schould countUp 
-function countUp() {
-    let elem = document.getElementById('count0');  
-    let stopValue = document.getElementById('count0').textContent;
-    let value = 0;
-    let stop = +stopValue;
-    let id = setInterval(frame, 1);
+//Find hhow many numbers we have
+function goUp(numbers) {
+    let repeat = 0;
+    for (let j = 0; j < numbers.length; j++) {
+        countUp(j)
+        repeat++;
+}
+    }
+//Numbers count UP functions add for each number which schould countUp 
+function countUp(j) {
+//Find smallest number
+    let min = 100000;
+    for (let l = 0; l < numbers.length; l++) {
+        let skaicius = numbers[l].value;
+        if (skaicius < min) {
+            min = skaicius; 
+        } 
+        console.log(min);
+    }
+// Count UP function  
+let elem = document.getElementById('count' + [j]);  
+let stopValue = document.getElementById('count' + [j]).textContent;
+let value = 0;
+let stop = +stopValue;
+let id = setInterval(frame, 1);
+let speed = Math.round(stop/min);
     function frame() {
     if (value == stop) {
         clearInterval(id);
     } else {
-        value = value + 1 * 5; 
+        value = value + 1 * (speed + 1); 
         elem.innerHTML  = value; 
     }
-}
-}
-function countUp1() {
-    let elem = document.getElementById('count1');  
-    let stopValue = document.getElementById('count1').textContent;
-        let value = 0;
-        let stop = +stopValue;
-        let id = setInterval(frame, 1);
-        function frame() {
-        if (value == stop) {
-            clearInterval(id);
-        } else {
-            value++ 
-            elem.innerHTML  = value; 
-            
-        }
     }
 }
-function countUp2() {
-    let elem = document.getElementById('count2');  
-    let stopValue = document.getElementById('count2').textContent;
-        let value = 0;
-        let stop = +stopValue;
-        let id = setInterval(frame, 1);
-        function frame() {
-        if (value == stop) {
-            clearInterval(id);
-        } else {
-            value = value + 1 * 42; 
-            elem.innerHTML  = value; 
-            
-        }
-    }
-}
-function countUp3() {
-    let elem = document.getElementById('count3');  
-    let stopValue = document.getElementById('count3').textContent;
-        let value = 0;
-        let stop = +stopValue;
-        let id = setInterval(frame, 1);
-        function frame() {
-        if (value == stop) {
-            clearInterval(id);
-        } else {
-            value = value + 1 * 4;
-            elem.innerHTML  = value; 
-            
-        }
-    }
-}
-    
-
 // <!-- numbers end --> 
 
 // <!-- our blog start --> 
