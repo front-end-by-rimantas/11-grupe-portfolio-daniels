@@ -13,12 +13,48 @@
     display: inline-block;
     width: 100%;
     height: 100vh;
+    padding: 0;
     background-image: url(../img/other/bg.jpg);
+    z-index: 1;
+    position: relative;
+}
+.hero-color {
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 3;
 }
     .hero-bg > .row {
         margin-top: 200px;
+        z-index: 4;
+        position: absolute;
+        left: 0;
+        top: 20%;
 
     }
+        .hero-bg > .row h1 {
+            display: inline-block;
+            width: 100%;
+            color: white;
+            font-size: 50px;
+
+        }
+        .hero-bg > .row p {
+            display: inline-block;
+            width: 100%;
+            color: white;
+            font-size: 50px;
+
+        }
+        .hero-bg > .row .socials {
+            display: inline-block;
+            width: 100%;
+            color: white;
+            font-size: 50px;
+
+        }
 /* <!-- hero end --> */
 
 /* <!-- about me start --> */
