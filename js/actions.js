@@ -26,7 +26,15 @@ renderBlocks('services', services );
 // <!-- portfolio end --> 
 
 // <!-- testimonials start --> 
-document.querySelector ( '#testimonials .testimonials' ).innerHTML = generateTestimonials ( testimonials );
+
+renderTestimonials (testimonials);
+// document.querySelector ( '#testimonials .testimonials' ).innerHTML = generateTestimonials ( testimonials );
+// document.querySelector ('#slide .buttons').innerHTML = generateBubbles('#slide', testimonials)
+// document.querySelectorAll( '.navigation .bubble' ).forEach ( item => {
+//     item.addEventListener ( 'click', openTestimonial )
+// });
+renderPagination ('#testimonialContent', renderTestimonials, testimonials, 1 );
+
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 

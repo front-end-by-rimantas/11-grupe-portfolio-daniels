@@ -70,22 +70,22 @@ const about = [
 // <!-- testimonials start -->
 const testimonials = [
     {
-        imgFile : 'image',
-        content : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, sunt error? Iste, quae voluptas. Libero odit placeat voluptas autem fugiat, molestiae eius aspernatur quisquam hic nostrum aliquid! Pariatur, placeat amet?',
-        author : 'Alex Smith',
-        occupation : 'Envato customer',
+        imgFile : '1 (1).jpg',
+        content : 'This team is great, i really enoyed to work with them and the quality of work is excellent',
+        author : 'Aurelijus Smith',
+        occupation : 'BIT Java student',
     },
     {
-        imgFile : 'image',
-        content : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, sunt error? Iste, quae voluptas. Libero odit placeat voluptas autem fugiat, molestiae eius aspernatur quisquam hic nostrum aliquid! Pariatur, placeat amet?',
-        author : 'John Smith',
-        occupation : 'Envato customer',
+        imgFile : '2 (2).jpg',
+        content : 'I would like to thank Jerry for a great job! The webpage he made for me is amazing!',
+        author : 'Mindaugas Smith',
+        occupation : 'Bit Java student',
     },
     {
-        imgFile : 'image',
-        content : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, sunt error? Iste, quae voluptas. Libero odit placeat voluptas autem fugiat, molestiae eius aspernatur quisquam hic nostrum aliquid! Pariatur, placeat amet?',
-        author : 'Daniel Smith',
-        occupation : 'Envato customer',
+        imgFile : '3 (3).jpg',
+        content : 'Best partner of them all. Good communication, perfect website.',
+        author : 'Karolis Smith',
+        occupation : 'BIT Full-Stack student',
     }
 ];
 // <!-- testimonials end --> 

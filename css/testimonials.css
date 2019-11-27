@@ -9,7 +9,7 @@
     .testimonials > .list {
         display: inline-block;
         width: 300%; 
-        margin-left: -100%;
+        transition: 1s;
     }
 
         .testimonials > .list > .item {
@@ -20,18 +20,10 @@
             line-height: 80px;
         }
 
-    .testimonials > .navigation {
+     .testimonials > .navigation {
         display: inline-block;
-        width: 100%;
+        width: auto;
     }
-
-        .testimonials > .navigation > .bubble {
-
-        }
-
-        .testimonials > .navigation > .bubble > .full-bibble {
-
-        }
 
 .imgFile > img{
     display: inline-block;
@@ -46,6 +38,7 @@
     margin-bottom: 30px;
     font-size: 20px;
     line-height: 24px;
+    min-height: 60px;
     font-weight: lighter;
 }
 
