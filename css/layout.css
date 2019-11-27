@@ -7,7 +7,7 @@
     .container > .row {
         display: inline-block;
         width: 1200px;
-        margin: 30px calc( 50% - 600px ) ;
+        margin: 0px calc( 50% - 600px ) ;
         text-align: center;
     }
         .container > .row > .section {

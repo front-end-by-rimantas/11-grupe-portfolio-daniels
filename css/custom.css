@@ -5,9 +5,20 @@
 /* <!-- layout end --> */
 
 /* <!-- header start --> */
+
 /* <!-- header end --> */
 
 /* <!-- hero start --> */
+.hero-bg {
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/other/bg.jpg);
+}
+    .hero-bg > .row {
+        margin-top: 200px;
+
+    }
 /* <!-- hero end --> */
 
 /* <!-- about me start --> */
@@ -21,7 +32,7 @@
         width: 40%;
         float: left;
         position: relative;
-        z-index: 2;
+        z-index: 1;
     }
     .about-me > .me-img:after {
         display: inline-block;
@@ -85,7 +96,8 @@
     }
     .about-me > .info-me {
         width: 100%;
-        margin: 60px 0;   
+        margin: 60px 0px;
+        padding: 0px 15px;   
     }
 }
 @media (max-width: 400px) {
@@ -113,6 +125,132 @@
 /* <!-- our blog end --> */
 
 /* <!-- contact us start --> */
+#contact .section {
+    display: block;
+    width: 100%;
+    margin-top: 100px;
+}
+    #contact h2 {
+        display: inline-block;
+    }
+    #contact .contacts {
+        display: inline-block;
+        width: 100%;
+        float: left;
+    }
+    #contact .address {
+            display: inline-block;
+            width: 250px;
+            margin: 20px 30px;
+        }
+        #contact .fa  {
+                padding: 18px;
+                border-radius: 50%;
+                background-color: #F7F7F7;
+                color: #748182;
+                text-decoration: none;
+            }
+            #contact .fa:hover{
+                background-color: #1C1C1C;
+                color: white;
+            }
+            #contact h4 {
+                padding: 7px;
+                margin-top: 5px;
+            }
+            #contact p {
+                font-size: 14px;
+                color: #748182;
+                padding: 0, 0, 50, 0;
+                margin-top: 5px;
+            }
+            #contact .email {
+            display: inline-block;
+            width: 250px;
+            margin: 20px 30px;
+            }
+            #contact .phone {
+                display: inline-block;
+                width: 250px;
+                margin: 20px 30px;
+            }
+           
+    #contact form {
+        display: inline-block;
+        width: 880px;
+        padding-top: 30px;
+    }
+    #contact .two-in-row {
+            display: inline-block;
+            width: 45%;
+            float: left;
+            background-color:  #F7F7F7;
+            border-radius: 5px;
+            font-size: 15px;
+            line-height: 20px;
+            border: none;
+        }
+        #contact .two-in-row:last-of-type {
+            margin-left: 10%;
+        }
+        #contact form > textarea {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            resize: vertical;
+            margin-top: 10px;
+            background-color:  #F7F7F7;
+            border-radius: 5px;
+            min-height: 130px;
+            max-height: 350px;
+            font-size: 15px;
+            line-height: 20px;
+            border: none;
+        }
+    #submit {
+        display: inline-block;
+        float: left;
+    }
+@media (max-width: 1100px) {
+    #contact form {
+        width: 800px;
+        padding-top: 30px;
+    }
+}
+@media (max-width: 900px) {
+    #contact form {
+        width: 700px;
+        padding-top: 30px;
+    }
+}
+@media (max-width: 800px) {
+    #contact form {
+        width: 100%;
+        padding-top: 30px;
+    }
+    #contact .two-in-row {
+        display: inline-block;
+        width: 100%;
+        float: left;
+    }
+    #contact .two-in-row:last-of-type {
+        margin-left: 0;
+    }
+    #contact form > textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        resize: vertical;
+        margin-top: 10px;
+        background-color:  #F7F7F7;
+        border-radius: 5px;
+        min-height: 130px;
+        max-height: 350px;
+        font-size: 15px;
+        line-height: 20px;
+        border: none;
+        padding: 15px;
+    }
+}
 /* <!-- contact us end --> */
 
 /* <!-- footer start --> */

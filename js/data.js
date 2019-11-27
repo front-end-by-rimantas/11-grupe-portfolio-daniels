@@ -27,6 +27,12 @@ const about = [
         value: 90
     },
 ]
+//Element on screen options
+const options = {
+    root: null,
+    treshold: 0.1,
+    rootMargin: "-200px 0px -300px 0px"
+};
 // <!-- about me end --> 
 
 // <!-- services start --> 
@@ -91,6 +97,28 @@ const testimonials = [
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 
+const numbers = [
+    {
+        icon: 'users',
+        value: 850,
+        title: 'Happy Customers'
+    },
+    {
+        icon: 'thumbs-up',
+        value: 230,
+        title: 'Complete Projects'
+    },
+    {
+        icon: 'bullhorn',
+        value: 9450,
+        title: 'Lines Of Code'
+    },
+    {
+        icon: 'cloud-download',
+        value: 780,
+        title: 'Files Downloaded'
+    },
+]
 // <!-- numbers end --> 
 
 // <!-- our blog start --> 
