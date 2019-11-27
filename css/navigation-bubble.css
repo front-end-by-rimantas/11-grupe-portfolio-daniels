@@ -1,0 +1,27 @@
+.bubble {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    cursor: pointer;
+    
+}
+
+    .bubble::after {
+        display: inline-block;
+        background-color: var(--color-text);
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--color-extra);
+    }
+
+    .bubble:hover::after {
+       background-color: var(--color-text);
+    }
+
+    .bubble:active::after {
+        background-color: var(--color-text);
+    }
+    
