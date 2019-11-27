@@ -19,7 +19,8 @@ headerScroll();
 window.addEventListener('scroll', headerHide);
 // <!-- header end --> 
 
-// <!-- hero start --> 
+// <!-- hero start -->
+renderHeroSocials('hero-socials', hero); 
 // <!-- hero end --> 
 
 // <!-- about me start --> 

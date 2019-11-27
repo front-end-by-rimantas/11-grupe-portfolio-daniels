@@ -85,6 +85,39 @@ function headerHide() {
 // <!-- header end --> 
 
 // <!-- hero start --> 
+function renderHeroSocials(target, list) {
+    let HTML = '';
+    let valid = 0;
+    if ( target.length === 0 ||
+        typeof(target) !== 'string' ) {
+        return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
+    }
+    if ( !Array.isArray(list) ) {
+        return console.error('ERROR: Truksta saraso');
+    }
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        if (!item.icon) {
+            continue;
+        }
+        if (typeof(item.icon) !== 'string') {
+            return console.error('ERROR: Data faile nurodykita informacija nera tekstas arba value nera skaicius');
+        }
+        if (item.icon.length < 1) {
+                return console.error('ERROR: Data faile nurodytos ne visos arba netinkamos kintamuju reiksmes');
+        }      
+        HTML += `<i class=" fa fa-${item.icon}" ></i>`;
+        valid++;
+        if (valid === 5) {
+            break;
+        }
+    }
+        if (valid === 0) {
+            return console.error('ERROR: Neivedete nei vienos teisingos reiksmes data.js faile');
+            }
+        return document.getElementById(target).innerHTML = HTML;
+}
+
 // <!-- hero end --> 
 
 // <!-- about me start --> 

@@ -6,10 +6,29 @@
 // <!-- layout start --> 
 // <!-- layout end --> 
 
-// <!-- header start --> 
+// <!-- header start -->
+
 // <!-- header end --> 
 
 // <!-- hero start --> 
+const hero = [
+    {
+        icon: 'facebook',
+    },
+    {
+        icon: 'twitter',
+    },
+    {
+        icon: 'linkedin',
+    },
+    {
+        icon: 'behance',
+    },
+    {
+        icon: 'youtube',
+    },
+] 
+
 // <!-- hero end --> 
 
 // <!-- about me start --> 
