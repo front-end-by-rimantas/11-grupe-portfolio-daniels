@@ -85,6 +85,39 @@ function headerHide() {
 // <!-- header end --> 
 
 // <!-- hero start --> 
+function renderHeroSocials(target, list) {
+    let HTML = '';
+    let valid = 0;
+    if ( target.length === 0 ||
+        typeof(target) !== 'string' ) {
+        return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
+    }
+    if ( !Array.isArray(list) ) {
+        return console.error('ERROR: Truksta saraso');
+    }
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        if (!item.icon) {
+            continue;
+        }
+        if (typeof(item.icon) !== 'string') {
+            return console.error('ERROR: Data faile nurodykita informacija nera tekstas arba value nera skaicius');
+        }
+        if (item.icon.length < 1) {
+                return console.error('ERROR: Data faile nurodytos ne visos arba netinkamos kintamuju reiksmes');
+        }      
+        HTML += `<i class=" fa fa-${item.icon}" ></i>`;
+        valid++;
+        if (valid === 5) {
+            break;
+        }
+    }
+        if (valid === 0) {
+            return console.error('ERROR: Neivedete nei vienos teisingos reiksmes data.js faile');
+            }
+        return document.getElementById(target).innerHTML = HTML;
+}
+
 // <!-- hero end --> 
 
 // <!-- about me start --> 
@@ -484,13 +517,14 @@ let elem = document.getElementById('count' + [j]);
 let stopValue = document.getElementById('count' + [j]).textContent;
 let value = 0;
 let stop = +stopValue;
-let id = setInterval(frame, 7);
-let speed = Math.round(stop/min);
+let id = setInterval(frame, 50);
+let speed = Math.round(stop/20);
     function frame() {
-        if (value == stop) {
+        if (value >= stop) {
             clearInterval(id);
+            elem.innerHTML  = stopValue;
         } else {
-            value = value + 1 * (speed + 1); 
+            value = value + 1 * speed; 
             elem.innerHTML  = value; 
         }
     }
@@ -505,22 +539,3 @@ let speed = Math.round(stop/min);
 
 // <!-- footer start --> 
 // <!-- footer end --> 
-
-
-// const sectionInfo = document.querySelector('.info-me');
-
-// const options = {
-//     root: null,
-//     treshold: 0.25,
-//     rootMargin: "-200px 0px -400px 0px"
-
-// };
-
-// const observer = new IntersectionObserver(function(entries, observer) {
-//     entries.forEach(entry => {
-//         // console.log(entry.target);
-        
-//     });
-    
-// }, options);
-// observer.observe(sectionInfo);
