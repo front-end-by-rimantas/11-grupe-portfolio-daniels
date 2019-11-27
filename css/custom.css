@@ -186,6 +186,7 @@
 .me-achiev {
     display: inline-block;
     text-align: left;
+    padding: 80px 20px;
 }
     .about-me > .me-img {
         display: inline-block;
@@ -288,7 +289,7 @@
 #contact .section {
     display: block;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 60px;
 }
     #contact h2 {
         display: inline-block;
@@ -414,4 +415,13 @@
 /* <!-- contact us end --> */
 
 /* <!-- footer start --> */
+footer > .row p {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: center;
+    word-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text);
+}
 /* <!-- footer end --> */
