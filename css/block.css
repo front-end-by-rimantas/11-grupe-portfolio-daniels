@@ -71,6 +71,19 @@
 /* <!-- services end --> */
 
 /* <!-- portfolio start --> */
+.portfolio > .block {
+    padding: 0;
+    box-shadow: 0 0 5px  rgb(226, 226, 226);
+}
+.portfolio-img {
+    display: inline-block;
+    width: 100%;
+}
+.portfolio-img > img {
+    display: inline-block;
+    width: 100%;
+}
+
 /* <!-- portfolio end --> */
 
 /* <!-- testimonials start --> */

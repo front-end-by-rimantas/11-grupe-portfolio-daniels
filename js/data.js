@@ -90,6 +90,26 @@ const options = {
 // <!-- services end --> 
 
 // <!-- portfolio start --> 
+const portfolio = [
+    {
+        imgFile: '1.jpg',
+    },
+    {
+        imgFile: '2.jpg',
+    },
+    {
+        imgFile: '3.jpg',
+    },
+    {
+        imgFile: '4.jpg',
+    },
+    {
+        imgFile: '5.jpg',
+    },
+    {
+        imgFile: '6.jpg',
+    },
+]
 // <!-- portfolio end --> 
 
 // <!-- testimonials start -->
