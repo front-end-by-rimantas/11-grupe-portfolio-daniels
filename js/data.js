@@ -11,6 +11,7 @@
 // <!-- header end --> 
 
 // <!-- hero start --> 
+const heroAnime = ['Larry Daniels', 'Developer', 'Designer'];
 const hero = [
     {
         icon: 'facebook',
