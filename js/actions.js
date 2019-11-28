@@ -20,6 +20,7 @@ window.addEventListener('scroll', headerHide);
 // <!-- header end --> 
 
 // <!-- hero start -->
+heroAnimation( heroAnime, 0, 0, 'add' );
 renderHeroSocials('hero-socials', hero); 
 // <!-- hero end --> 
 
