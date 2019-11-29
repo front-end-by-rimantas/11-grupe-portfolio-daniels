@@ -78,12 +78,29 @@
 .portfolio-img {
     display: inline-block;
     width: 100%;
+    position: relative;
 }
 .portfolio-img > img {
     display: inline-block;
     width: 100%;
 }
+.portfolio-img > .hover-efect {
+    display: inline-block;
+    width: 97%;
+    height: 97%;
+    position: absolute;
+    top: 1.5%;
+    left: 1.5%;
+    background-color: white;
+    opacity: 0;  
+    transition: .5s ease;  
+    transform: translate(-50%, -50%);
 
+    
+}
+.block > .portfolio-img:hover .hover-efect{
+    opacity: 0.95;
+}
 /* <!-- portfolio end --> */
 
 /* <!-- testimonials start --> */

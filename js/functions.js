@@ -135,18 +135,6 @@ function heroAnimation( list, wordIndex, letterIndex, actionType ) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function renderHeroSocials(target, list) {
     let HTML = '';
     let valid = 0;
@@ -315,7 +303,8 @@ function renderPortfolio(target, list) {
         }
         HTML += `<div class="block">
                     <div class="portfolio-img">
-                        <img src="./img/portfolio/${item.imgFile}">
+                        <div class="hover-efect"></div>
+                        <img class="port-image" src="./img/portfolio/${item.imgFile}">
                     </div>
                  </div>`;
         valid++;
