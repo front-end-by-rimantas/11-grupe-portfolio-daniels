@@ -303,7 +303,13 @@ function renderPortfolio(target, list) {
         }
         HTML += `<div class="block">
                     <div class="portfolio-img">
-                        <div class="hover-efect"></div>
+                        <div class="hover-efect">
+                            <div class="text">WEB DESIGN</div>
+                            <div class="center-fafa">
+                                <i class="fa fa-chain-broken"></i>
+                                <i class="fa fa-search-plus"></i>
+                            </div>
+                        </div>
                         <img class="port-image" src="./img/portfolio/${item.imgFile}">
                     </div>
                  </div>`;
