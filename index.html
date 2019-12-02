@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio-Daniels</title>
     <link rel="icon" href="./img/other/hero.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/custom.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -46,10 +47,14 @@
 <!-- header end -->
 
 <!-- hero start -->
-    <div class="container hero-bg">
+    <div class="container hero-bg" >
+        <div class="hero-color" id="particles-js"></div>
         <div class="row">
             <h1>Hello</h1>
-            HERO
+            <h2 class="iam">
+                I Am <div id="hero-anime"></div>
+            </h2>
+            <div class="socials" id="hero-socials"></div>
         </div>
     </div>
 <!-- hero end -->
@@ -89,11 +94,26 @@
 <!-- services end -->
 
 <!-- portfolio start -->
-    <div class="container" id="works">
+    <div class="container portfolio-container" id="works">
         <div class="row">
-                <div class="section">
-                    <h2>Portfolio.</h2>
+            <div class="section">
+                <h2>Portfolio.</h2>
+            </div>
+            <nav>
+                <div class="list">
+                    <a href="#">All</a>      
                 </div>
+                <div class="list">
+                    <a href="#">Brand</a>
+                </div>
+                <div class="list">
+                    <a href="#" >Design</a>
+                </div>
+                <div class="list">
+                    <a href="#works">Graphic</a>
+                </div>
+            </nav>
+            <div class="portfolio" id="album"></div>
         </div>       
     </div>
 <!-- portfolio end -->
@@ -104,13 +124,8 @@
             <div class="section">
                 <h2>Testimonials.</h2>
                 </div>      
-            <div class="clients-reviews">
-                <div class="author-img">
-                    <img src="./img/clients/1 (1).jpg" ="author image">
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, sunt error? Iste, quae voluptas. Libero odit placeat voluptas autem fugiat, molestiae eius aspernatur quisquam hic nostrum aliquid! Pariatur, placeat amet?</p>
-                <h6>Alex Smith</h6>
-                <span>Envato customer</span>
+            <div  class="content">
+                <div id="testimonialContent"></div>
             </div>
         </div>
     </div>
@@ -170,7 +185,7 @@
 <!-- footer start -->
     <footer class="container">
         <div class="row">
-            FOOTER
+            <p>Copy Right 2018 © By Daniels All Rights Reserved</p>
         </div>
     </footer>
 <!-- footer end -->
@@ -178,6 +193,9 @@
     <script src="./js/data.js"></script>
     <script src="./js/functions.js"></script>
     <script src="./js/actions.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/particles.min.js"></script>
 
 </body>
 </html>

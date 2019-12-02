@@ -85,6 +85,89 @@ function headerHide() {
 // <!-- header end --> 
 
 // <!-- hero start --> 
+function heroAnimation( list, wordIndex, letterIndex, actionType ) {
+    // Element with animation
+    const target = document.getElementById('hero-anime');
+    const timeStep = 50;
+    const delayAfter = 500;
+    const deleteTimeStep = 50;
+    const delayBefore = 1000;
+
+    if ( actionType === 'add' ) {
+        target.classList.add('anime');
+        setTimeout(() => {
+            //Convert word to separate letters
+            target.textContent += list[wordIndex][letterIndex];
+            if ( list[wordIndex].length > letterIndex + 1 ) {
+                heroAnimation( list, wordIndex, letterIndex+1, actionType )
+            } else {
+                heroAnimation( list, wordIndex, letterIndex, 'delayAfter' )
+            }
+        }, timeStep);
+    }
+    if ( actionType === 'delayAfter' ) {
+        setTimeout(() => {
+            heroAnimation( list, wordIndex, letterIndex, 'remove' )
+        }, delayAfter);
+    }
+    if ( actionType === 'remove' ) {
+        setTimeout(() => {
+            const word = list[wordIndex];
+            //Takes one letter out
+            target.textContent = word.slice(0, letterIndex);
+            if ( 0 <= letterIndex - 1 ) {
+                heroAnimation( list, wordIndex, letterIndex-1, actionType )
+            } else {
+                heroAnimation( list, wordIndex, letterIndex, 'delayBefore' )
+            }
+        }, deleteTimeStep);
+    }
+    if ( actionType === 'delayBefore' ) {
+        setTimeout(() => {
+            // Check which word to animate
+            if ( wordIndex+1 === list.length ) {
+                heroAnimation( list, 0, 0, 'add' )
+            } else {
+                heroAnimation( list, wordIndex+1, 0, 'add' )
+            }
+        }, delayBefore);
+    }
+}
+
+
+function renderHeroSocials(target, list) {
+    let HTML = '';
+    let valid = 0;
+    if ( target.length === 0 ||
+        typeof(target) !== 'string' ) {
+        return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
+    }
+    if ( !Array.isArray(list) ) {
+        return console.error('ERROR: Truksta saraso');
+    }
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        if (!item.icon) {
+            continue;
+        }
+        if (typeof(item.icon) !== 'string') {
+            return console.error('ERROR: Data faile nurodykita informacija nera tekstas arba value nera skaicius');
+        }
+        if (item.icon.length < 1) {
+                return console.error('ERROR: Data faile nurodytos ne visos arba netinkamos kintamuju reiksmes');
+        }      
+        HTML += `<i class=" fa fa-${item.icon}" ></i>`;
+        valid++;
+        if (valid === 5) {
+            break;
+        }
+    }
+        if (valid === 0) {
+            return console.error('ERROR: Neivedete nei vienos teisingos reiksmes data.js faile');
+            }
+        return document.getElementById(target).innerHTML = HTML;
+}
+
 // <!-- hero end --> 
 
 // <!-- about me start --> 
@@ -197,9 +280,254 @@ const observer = new IntersectionObserver(function(entries, observer) {
 // <!-- services end --> 
 
 // <!-- portfolio start --> 
+function renderPortfolio(target, list) {
+    let HTML = '';
+    let valid = 0;
+    if ( target.length === 0 ||
+        typeof(target) !== 'string' ) {
+        return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
+    }    
+    if ( !Array.isArray(list) ) {
+        return console.error('ERROR: Truksta saraso');
+    }
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        if (!item.imgFile) {
+            continue;
+        }
+        if (typeof(item.imgFile) !== 'string') {
+            return console.error('ERROR: Data faile nurodykita informacija nera tekstas');
+        }
+        if (item.imgFile.length < 4) {
+                return console.error('ERROR: Data faile nurodytos ne visos arba neiteisingos kintamuju reiksmes');
+        }
+        HTML += `<div class="block">
+                    <div class="portfolio-img">
+                        <div class="hover-efect">
+                            <div class="text">WEB DESIGN</div>
+                            <div class="center-fafa">
+                                <i class="fa fa-chain-broken"></i>
+                                <i class="fa fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <img class="port-image" src="./img/portfolio/${item.imgFile}">
+                    </div>
+                 </div>`;
+        valid++;
+        if (valid === 6) {
+           break;
+        }
+    }
+        if (valid === 0) {
+            return console.error('ERROR: Neivedete nei vienos teisingos reiksmes data.js faile');
+        }
+    return document.getElementById(target).innerHTML = HTML;
+}
 // <!-- portfolio end --> 
 
 // <!-- testimonials start --> 
+
+
+    
+// function generateTestimonials (testimonials) {
+  
+//     let listHTML = ``;
+
+//     testimonials.forEach ( testimonialContent  => {
+//         listHTML += `<div class="item">
+//                         <div class="imgFile">
+//                             <img src="./img/clients/${testimonialContent.imgFile}">
+//                         </div>
+//                         <div class="content">${testimonialContent.content}</div>
+//                         <div class="author">${testimonialContent.author}</div>
+//                         <div class="occupation">${testimonialContent.occupation}</div>    
+//                      </div>`;
+//     });
+
+//         return `<div class="testimonials">
+//                         <div id="carousel" class="list">${listHTML}</div>
+//                         <div id="slide" class="navigation">
+//                             <div class="buttons"</div>
+//                         </div>
+//                     </div>`;
+// } 
+
+
+function renderTestimonials ( list ) {
+    let HTML ='';
+    
+    
+    if ( list.length === 0 ||
+        typeof(list) !== 'string' ) {
+        return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
+    }
+
+    if ( !Array.isArray(list) ) {
+        return console.error('ERROR: Truksta saraso');
+    }
+
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+            
+        if (!item.imgFile ||
+            !item.content ||
+            !item.author ||
+            !item.occupation) {
+            continue;
+        }
+
+    if (typeof(item.imgFile) !== 'string' ||
+        typeof(item.content) !== 'string' ||
+        typeof(item.author) !== 'string'||
+        typeof(item.occupation) !== 'string') {
+            return console.error('ERROR: Data faile nurodykita informacija nera tekstas');
+    }    
+
+    if (item.imgFile.length < 1 ||
+        item.content.length < 1 ||
+        item.author.length < 1 ||
+        item.occupation.length < 1) {
+            return console.error('ERROR: Data faile nurodytos ne visos kintamuju reiksmes');
+    }        
+
+    HTML += renderTestimonialItem ( item );
+    }
+    return document.querySelector('#testimonialContent').innerHTML = HTML;
+} 
+
+function renderTestimonialItem ( item ) {
+    return `<div class="item">
+    <div class="imgFile">
+        <img src="./img/clients/${item.imgFile}">
+    </div>
+    <div class="content">${item.content}</div>
+    <div class="author">${item.author}</div>
+    <div class="occupation">${item.occupation}</div>    
+          </div>`;
+}
+
+// function  generateBubbles () {
+
+//     let bubHTML = ``;
+        
+//     for (let i=0; i<=testimonials.length-1; i++) {
+//         bubHTML += `<div class="bubble"></div>`;
+    
+//      } return `<div id="slide" class="navigation">${bubHTML}</div>`;    
+// }  
+
+
+function renderPagination ( target, renderingFunction, data, countPerPage ) {
+    if ( typeof(target ) !== 'string' || 
+        target === '' ) {
+        return console.error( 'Pirmasis parametras: Reikia nurodyti vieta, kurioje norima sugeneruoti turini.');
+    } 
+    
+    
+
+    const DOM = document.querySelector(target);
+    if (DOM === null ) {
+        return console.error ('Vieta, kurioje norima sugeneruoti turini - nerasta.')
+    }  
+    
+    if (typeof(renderingFunction) !== 'function' ) {
+        return console.error('Antrasis parametras: Reikia nurodyti funkcijos, kuri turi sugeneruoti pavienio elemento HTMLa, pavadinima' );
+    } 
+    
+    if ( !Array.isArray(data)) {
+        return console.error ('Treciasis parametras: Reikia pateikti sarasa objektu, kurie apraso generuojamus objektus.');
+    } 
+    
+
+    if ( data.length === 0 ) {
+        return console.error ('Treciasis parametras: Reikia pateikti sarasa objektu, kuris nebutu tuscias.');
+    } 
+
+    let objectsOnly = true;
+    for ( let i=0; i<data.length; i++ ) {
+        if (typeof(data[i]) !== 'object' ) {
+            objectsOnly = false; 
+            break;
+        }
+        // if ( !objectsOnly );
+        // return console.error( ' Treciasis parametras: Sarasa turi sudaryti tiktai objektai.');
+    } 
+    
+
+    // if ( !isFinite( countPerPage) ||
+    //     typeof( countPerPage !== 'number')) {
+    //     return console.error( 'Ketvirtasis parametras: Reikai nurodyti po kelis elementus atvaizduoti per puslapiavima (validus skaicius).');
+    // }
+
+    if ( countPerPage < 1 ||
+        countPerPage % 1 !== 0 ) {
+        return console.error( 'Ketvirtasis parametras: Reikai nurodyti po kelis elementus atvaizduoti per puslapiavima, tik sveikas, teigiamas skaicius');
+    }
+
+    let HTML = '';
+    const pageCount = Math.ceil(data.length / countPerPage);
+    let listHTML = '';
+    let pageHTML ='';
+
+    for ( let p=0; p<countPerPage; p++) {
+        pageHTML = renderingFunction( data[p]);
+    }
+
+    let bubblesHTML = '';
+
+    for ( let i=0; i<pageCount; i++) {
+        listHTML += `<div class="page">
+                        ${pageHTML}
+                    </div>`;
+        bubblesHTML += `div class="bubble"></div>`;
+    }
+
+    HTML +=    `<div class="pagination">
+                    <div class="list">
+                        ${listHTML}
+                    </div>
+                    <div class="controls">
+                        ${bubblesHTML}
+                    <div>
+                </div>`;
+           
+
+    DOM.innerHTML = HTML;
+
+    return;
+}
+
+
+// active bubble
+// document.addEventListener('click' .bubble).classList.add('active');
+// console.log('aa');
+
+
+// document.querySelectorAll ('.navigation .bubble').forEach ( item => {
+//     item.addEventListener ('click').classList.add('active');
+// });
+
+
+
+
+// function openTestimonial ( event ) {
+//     let target = event.target;
+
+//     if ( target.contains('01')) {
+//         document.getElementById("carousel").style.marginLeft = "0"; 
+//     }
+//     if ( classList.contains('two')) {
+//         document.getElementById("carousel").style.marginLeft = "-100%";
+//     } 
+//     if ( classList.contains('three')) {
+//         document.getElementById("carousel").style.marginLeft = "-200%";
+//     }
+//     return;
+// }
+
+
+
+
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 
@@ -282,13 +610,14 @@ let elem = document.getElementById('count' + [j]);
 let stopValue = document.getElementById('count' + [j]).textContent;
 let value = 0;
 let stop = +stopValue;
-let id = setInterval(frame, 7);
-let speed = Math.round(stop/min);
+let id = setInterval(frame, 50);
+let speed = Math.round(stop/20);
     function frame() {
-        if (value == stop) {
+        if (value >= stop) {
             clearInterval(id);
+            elem.innerHTML  = stopValue;
         } else {
-            value = value + 1 * (speed + 1); 
+            value = value + 1 * speed; 
             elem.innerHTML  = value; 
         }
     }
@@ -303,22 +632,3 @@ let speed = Math.round(stop/min);
 
 // <!-- footer start --> 
 // <!-- footer end --> 
-
-
-// const sectionInfo = document.querySelector('.info-me');
-
-// const options = {
-//     root: null,
-//     treshold: 0.25,
-//     rootMargin: "-200px 0px -400px 0px"
-
-// };
-
-// const observer = new IntersectionObserver(function(entries, observer) {
-//     entries.forEach(entry => {
-//         // console.log(entry.target);
-        
-//     });
-    
-// }, options);
-// observer.observe(sectionInfo);

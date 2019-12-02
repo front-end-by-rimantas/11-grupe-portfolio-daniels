@@ -13,12 +13,127 @@
     display: inline-block;
     width: 100%;
     height: 100vh;
+    padding: 0;
     background-image: url(../img/other/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+}
+.hero-color {
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 3;
 }
     .hero-bg > .row {
         margin-top: 200px;
+        z-index: 4;
+        position: absolute;
+        left: 0;
+        top: 20%;
+        bottom: 20%;
 
     }
+        .hero-bg > .row h1 {
+            display: inline-block;
+            width: 100%;
+            color: white;
+            font-size: 50px;
+        }
+        .hero-bg > .row h2 {
+            display: inline-block;           
+            text-decoration: none ;
+            color: white;
+            font-size: 40px;
+            font-weight: 100;
+        }
+        .row > .iam {
+            display: inline-block;
+            padding: 20px 0px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 40px;
+            font-weight: 50;
+            line-height: 50px;
+        }
+        .row > .iam > .anime {
+            display: inline-block;
+            color: white;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 50px;
+            border-right: 2px solid white;
+        }
+        .row > .iam > .anime::after{
+            display: inline-block;
+            content: "";
+            height: 70%;
+            width: 2px;
+            color: white;
+        }
+        .hero-bg > .row .socials {
+            display: inline-block;
+            width: 100%;
+        }
+            .hero-bg > .row > .socials i {
+                display: inline-block;
+                color: white;
+                font-size: 14px;
+                background-color: rgb(7, 7, 7, 0.5);
+                border-radius: 50%;
+                padding: 10px 12px;
+                margin: 10px 5px;
+                cursor: pointer;
+            }
+    @media (max-width: 800px) {
+        .row > .wrapper-center > .iam {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            top: -70px;
+            left: 0;
+        }
+        .wrapper-center > .wrapper {
+            display: inline-block;
+            width: 60%;
+            position: relative;
+            top: 70px;
+            right: 20%;
+        }
+        #is0, #is1, #is2 {
+            text-align: center;
+        }
+    }
+    @media (max-width: 550px) {
+        .hero-bg > .row h1 {
+            font-size: 25px;
+        }
+            .row > .wrapper-center {
+                padding-top: 15px;
+            }
+                .row > .wrapper-center > .iam {
+                    font-size: 25px;
+                    line-height: 25px;
+                    position: relative;
+                    top: -40px;
+                    left: 0;
+                }
+                .wrapper-center > .wrapper {
+                    position: relative;
+                    top: 45px; 
+                    height: 40px; 
+                }
+                    #is0, #is1, #is2 {
+                        text-align: center;
+                        font-size: 25px;
+                        line-height: 25px
+                    }
+    }
+
 /* <!-- hero end --> */
 
 /* <!-- about me start --> */
@@ -26,6 +141,7 @@
 .me-achiev {
     display: inline-block;
     text-align: left;
+    padding: 80px 20px;
 }
     .about-me > .me-img {
         display: inline-block;
@@ -76,7 +192,7 @@
         color: var(--color-text);
         font-size: 18px;
         line-height: 24px;
-        margin-top: 20px;
+        margin: 20px 0px;
     }
     span.name {
         display: inline-block;
@@ -113,6 +229,27 @@
 /* <!-- services end --> */
 
 /* <!-- portfolio start --> */
+.portfolio-container > .row nav {
+    display: inline-block;
+    width: 100%;
+    padding: 0 15px;
+}
+.portfolio-container > .row .list {
+    display: inline-block;
+    
+    margin-top: 60px;
+    margin-bottom: 40px;
+
+}
+.portfolio-container > .row a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    margin: 0 20px;
+
+}
+
 /* <!-- portfolio end --> */
 
 /* <!-- testimonials start --> */
@@ -128,7 +265,7 @@
 #contact .section {
     display: block;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 60px;
 }
     #contact h2 {
         display: inline-block;
@@ -216,11 +353,41 @@
         width: 800px;
         padding-top: 30px;
     }
+    #contact .address {
+        display: inline-block;
+        width: 25%;
+        margin: 20px 30px;
+    }
+    #contact .email {
+        display: inline-block;
+        width: 25%;
+        margin: 20px 30px;
+        }
+    #contact .phone {
+        display: inline-block;
+        width: 25%;
+        margin: 20px 30px;
+    }
 }
 @media (max-width: 900px) {
     #contact form {
         width: 700px;
         padding-top: 30px;
+    }
+    #contact .address {
+        display: inline-block;
+        width: 25%;
+        margin: 20px 10px;
+    }
+    #contact .email {
+        display: inline-block;
+        width: 25%;
+        margin: 20px 10px;
+        }
+    #contact .phone {
+        display: inline-block;
+        width: 25%;
+        margin: 20px 10px;
     }
 }
 @media (max-width: 800px) {
@@ -235,6 +402,7 @@
     }
     #contact .two-in-row:last-of-type {
         margin-left: 0;
+        margin: 10px 0;
     }
     #contact form > textarea {
         width: 100%;
@@ -250,8 +418,32 @@
         border: none;
         padding: 15px;
     }
+    #contact .address {
+        display: inline-block;
+        width: 100%;
+        margin: 20px 0;
+    }
+    #contact .email {
+        display: inline-block;
+        width: 100%;
+        margin: 20px 0;
+        }
+    #contact .phone {
+        display: inline-block;
+        width: 100%;
+        margin: 20px 0;
+    }
 }
 /* <!-- contact us end --> */
 
 /* <!-- footer start --> */
+footer > .row p {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: center;
+    word-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text);
+}
 /* <!-- footer end --> */

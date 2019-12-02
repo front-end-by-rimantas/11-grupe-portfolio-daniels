@@ -6,10 +6,30 @@
 // <!-- layout start --> 
 // <!-- layout end --> 
 
-// <!-- header start --> 
+// <!-- header start -->
+
 // <!-- header end --> 
 
 // <!-- hero start --> 
+const heroAnime = ['Larry Daniels', 'Developer', 'Designer'];
+const hero = [
+    {
+        icon: 'facebook',
+    },
+    {
+        icon: 'twitter',
+    },
+    {
+        icon: 'linkedin',
+    },
+    {
+        icon: 'behance',
+    },
+    {
+        icon: 'youtube',
+    },
+] 
+
 // <!-- hero end --> 
 
 // <!-- about me start --> 
@@ -71,9 +91,49 @@ const options = {
 // <!-- services end --> 
 
 // <!-- portfolio start --> 
+const portfolio = [
+    {
+        imgFile: '1.jpg',
+    },
+    {
+        imgFile: '2.jpg',
+    },
+    {
+        imgFile: '3.jpg',
+    },
+    {
+        imgFile: '4.jpg',
+    },
+    {
+        imgFile: '5.jpg',
+    },
+    {
+        imgFile: '6.jpg',
+    },
+]
 // <!-- portfolio end --> 
 
-// <!-- testimonials start --> 
+// <!-- testimonials start -->
+const testimonials = [
+    {
+        imgFile : '1 (1).jpg',
+        content : 'This team is great, i really enoyed to work with them and the quality of work is excellent',
+        author : 'Aurelijus Smith',
+        occupation : 'BIT Java student',
+    },
+    {
+        imgFile : '2 (2).jpg',
+        content : 'I would like to thank Jerry for a great job! The webpage he made for me is amazing!',
+        author : 'Mindaugas Smith',
+        occupation : 'Bit Java student',
+    },
+    {
+        imgFile : '3 (3).jpg',
+        content : 'Best partner of them all. Good communication, perfect website.',
+        author : 'Karolis Smith',
+        occupation : 'BIT Full-Stack student',
+    }
+];
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 

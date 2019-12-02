@@ -19,7 +19,9 @@ headerScroll();
 window.addEventListener('scroll', headerHide);
 // <!-- header end --> 
 
-// <!-- hero start --> 
+// <!-- hero start -->
+heroAnimation( heroAnime, 0, 0, 'add' );
+renderHeroSocials('hero-socials', hero); 
 // <!-- hero end --> 
 
 // <!-- about me start --> 
@@ -31,10 +33,20 @@ observer.observe(sectionInfo);
 renderBlocks('services', services );
 // <!-- services end --> 
 
-// <!-- portfolio start --> 
+// <!-- portfolio start -->
+renderPortfolio('album', portfolio ); 
 // <!-- portfolio end --> 
 
 // <!-- testimonials start --> 
+
+renderTestimonials (testimonials);
+// document.querySelector ( '#testimonials .testimonials' ).innerHTML = generateTestimonials ( testimonials );
+// document.querySelector ('#slide .buttons').innerHTML = generateBubbles('#slide', testimonials)
+// document.querySelectorAll( '.navigation .bubble' ).forEach ( item => {
+//     item.addEventListener ( 'click', openTestimonial )
+// });
+renderPagination ('#testimonialContent', renderTestimonials, testimonials, 1 );
+
 // <!-- testimonials end --> 
 
 // <!-- numbers start --> 
