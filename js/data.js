@@ -94,21 +94,27 @@ const options = {
 const portfolio = [
     {
         imgFile: '1.jpg',
+        class: 'graphic',
     },
     {
         imgFile: '2.jpg',
+        class: 'design',
     },
     {
         imgFile: '3.jpg',
+        class: 'graphic',
     },
     {
         imgFile: '4.jpg',
+        class: 'brand,'
     },
     {
         imgFile: '5.jpg',
+        class: 'design graphic',
     },
     {
         imgFile: '6.jpg',
+        class: 'brand,'
     },
 ]
 // <!-- portfolio end --> 

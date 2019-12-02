@@ -72,8 +72,18 @@
 
 /* <!-- portfolio start --> */
 .portfolio > .block {
+    transition: 2s;
     padding: 0;
     box-shadow: 0 0 5px  rgb(226, 226, 226);
+    
+    display: none;
+    transform: scale(0);
+}
+.portfolio > .block.show {
+    transition: all 2s;
+    
+    display: inline-block; 
+	transform: scale(1);
 }
 .portfolio-img {
     display: inline-block;

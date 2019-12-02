@@ -287,21 +287,23 @@ function renderPortfolio(target, list) {
         typeof(target) !== 'string' ) {
         return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
     }    
-    if ( !Array.isArray(list) ) {
+    if (!Array.isArray(list)) {
         return console.error('ERROR: Truksta saraso');
     }
     for (let i = 0; i < list.length; i++) {
         const item = list[i];
-        if (!item.imgFile) {
+        if (!item.imgFile ||
+            !item.class) {
             continue;
         }
-        if (typeof(item.imgFile) !== 'string') {
+        if (typeof(item.imgFile) !== 'string' ||
+            typeof(item.class) !== 'string') {
             return console.error('ERROR: Data faile nurodykita informacija nera tekstas');
         }
         if (item.imgFile.length < 4) {
                 return console.error('ERROR: Data faile nurodytos ne visos arba neiteisingos kintamuju reiksmes');
         }
-        HTML += `<div class="block">
+        HTML += `<div class="block port-block show ${item.class}">
                     <div class="portfolio-img">
                         <div class="hover-efect">
                             <div class="text">WEB DESIGN</div>
@@ -323,6 +325,51 @@ function renderPortfolio(target, list) {
         }
     return document.getElementById(target).innerHTML = HTML;
 }
+//Gallery filtering
+filterSelection("all");
+function filterSelection(filterWord) {
+   let selector = document.getElementsByClassName("port-block"); 
+   if (filterWord == "all") filterWord = "";
+   for (let i = 0; i < selector.length; i++) {
+        RemoveClass(selector[i], "show");
+        if (selector[i].className.indexOf(filterWord) > -1) AddClass(selector[i], "show");
+
+   }
+}
+
+function AddClass(element, name) {
+    let i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+function RemoveClass(element, name) {
+let i, arr1, arr2;
+arr1 = element.className.split(" ");
+arr2 = name.split(" ");
+for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+    arr1.splice(arr1.indexOf(arr2[i]), 1);             
+    }
+}
+element.className = arr1.join(" ");
+}
+
+  // Add active class to the current button (highlight it)
+let navList = document.getElementById("works-nav").getElementsByClassName("nav-list");
+for (let i = 0; i < navList.length; i++) {
+    navList[i].addEventListener("click", function(){
+    let current = document.getElementById("works-nav").getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+
 // <!-- portfolio end --> 
 
 // <!-- testimonials start --> 

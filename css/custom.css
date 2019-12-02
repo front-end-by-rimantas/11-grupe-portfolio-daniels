@@ -236,10 +236,8 @@
 }
 .portfolio-container > .row .list {
     display: inline-block;
-    
     margin-top: 60px;
     margin-bottom: 40px;
-
 }
 .portfolio-container > .row a {
     display: inline-block;
@@ -247,8 +245,9 @@
     line-height: 20px;
     font-weight: 600;
     margin: 0 20px;
-
+    cursor: pointer;
 }
+
 
 /* <!-- portfolio end --> */
 
