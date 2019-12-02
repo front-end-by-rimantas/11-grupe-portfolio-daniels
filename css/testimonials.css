@@ -1,4 +1,4 @@
-.testimonials {
+.testContent {
     display: inline-block;
     width: 90%;
     text-align: center;
@@ -6,13 +6,13 @@
     color: var(--color-text);
 }
 
-    .testimonials > .list {
+    .testContent > .list {
         display: inline-block;
         width: 300%; 
         transition: 1s;
     }
 
-        .testimonials > .list > .item {
+        .testContent > .list > .item {
             display: inline-block;
             width: calc(100% /3);
             float: left;
@@ -20,10 +20,11 @@
             line-height: 80px;
         }
 
-     .testimonials > .navigation {
+       .testContent .controls {
         display: inline-block;
+        align-self: center;
         width: auto;
-    }
+        }
 
 .imgFile > img{
     display: inline-block;
