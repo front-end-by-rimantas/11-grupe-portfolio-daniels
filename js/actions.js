@@ -33,7 +33,8 @@ observer.observe(sectionInfo);
 renderBlocks('services', services );
 // <!-- services end --> 
 
-// <!-- portfolio start --> 
+// <!-- portfolio start -->
+renderPortfolio('album', portfolio ); 
 // <!-- portfolio end --> 
 
 // <!-- testimonials start --> 

@@ -135,18 +135,6 @@ function heroAnimation( list, wordIndex, letterIndex, actionType ) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function renderHeroSocials(target, list) {
     let HTML = '';
     let valid = 0;
@@ -292,6 +280,49 @@ const observer = new IntersectionObserver(function(entries, observer) {
 // <!-- services end --> 
 
 // <!-- portfolio start --> 
+function renderPortfolio(target, list) {
+    let HTML = '';
+    let valid = 0;
+    if ( target.length === 0 ||
+        typeof(target) !== 'string' ) {
+        return console.error('ERROR: Nurodykite kuriose vietose HTML faile taikyti funkcija');
+    }    
+    if ( !Array.isArray(list) ) {
+        return console.error('ERROR: Truksta saraso');
+    }
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        if (!item.imgFile) {
+            continue;
+        }
+        if (typeof(item.imgFile) !== 'string') {
+            return console.error('ERROR: Data faile nurodykita informacija nera tekstas');
+        }
+        if (item.imgFile.length < 4) {
+                return console.error('ERROR: Data faile nurodytos ne visos arba neiteisingos kintamuju reiksmes');
+        }
+        HTML += `<div class="block">
+                    <div class="portfolio-img">
+                        <div class="hover-efect">
+                            <div class="text">WEB DESIGN</div>
+                            <div class="center-fafa">
+                                <i class="fa fa-chain-broken"></i>
+                                <i class="fa fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <img class="port-image" src="./img/portfolio/${item.imgFile}">
+                    </div>
+                 </div>`;
+        valid++;
+        if (valid === 6) {
+           break;
+        }
+    }
+        if (valid === 0) {
+            return console.error('ERROR: Neivedete nei vienos teisingos reiksmes data.js faile');
+        }
+    return document.getElementById(target).innerHTML = HTML;
+}
 // <!-- portfolio end --> 
 
 // <!-- testimonials start --> 
